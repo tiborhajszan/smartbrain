@@ -1,0 +1,81 @@
+/*
+Zero To Mastery Academy
+Complete Web Developer in 2025: Zero to Mastery
+React :: RoboFriends Project :: Card Css
+*/
+
+/* card styles ------------------------------------------------------------------------------------------------------ */
+
+.card {
+  max-width: 320px;
+  height: 90px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #9eebcf;
+  box-shadow: 3px 3px 8px 0 #9eebcf;
+  transition: transform 0.25s ease-out;
+}
+
+@media only screen and (min-width: 512px) { .card {
+  width: 240px;
+  height: 340px;
+  margin: 0 10px 20px;
+  padding: 20px;
+}}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* image styles ----------------------------------------------------------------------------------------------------- */
+
+.img-box {
+  height: 100%;
+  margin-right: 10px;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 512px) { .img-box {
+  height: 200px;
+  margin-right: 0;
+  float: none;
+  display: block;
+}}
+
+.img-box > img {
+  width: 50px;
+}
+
+@media only screen and (min-width: 512px) { .img-box > img {
+  width: 200px;
+}}
+
+/* text styles ------------------------------------------------------------------------------------------------------ */
+
+.text-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 512px) { .text-box {
+  height: 100px;
+}}
+
+.text-box > h2, .text-box > p {
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 512px) { .text-box > h2, .text-box > p {
+  text-align: center;
+}}
+
+.text-box > p {
+  font-size: 16px;
+}
