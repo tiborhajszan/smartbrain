@@ -1,18 +1,16 @@
 // #####################################################################################################################
 // Zero To Mastery Academy
 // Complete Web Developer in 2025: Zero to Mastery
-// Final Project :: Smart Brain :: Root Component Logic
+// Final Project | SmartBrain | Root Component Logic
 // #####################################################################################################################
 
-// imports -------------------------------------------------------------------------------------------------------------
-
 import React from "react";
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
 import Navigation from "./components/header/Navigation.jsx";
+import viteLogo from "/vite.svg"
+import reactLogo from "./assets/react.svg"
+import "./App.css"
 
-// root component renderer ---------------------------------------------------------------------------------------------
+// root component renderer #############################################################################################
 
 function App() {
   return (
@@ -20,17 +18,16 @@ function App() {
       <Navigation />
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img className="logo" src={viteLogo} alt="Vite Logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img className="logo react" src={reactLogo} alt="React Logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
     </>
   )
 }
 
-// exports -------------------------------------------------------------------------------------------------------------
+// exports #############################################################################################################
 
 export default App

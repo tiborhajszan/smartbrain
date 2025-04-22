@@ -6,8 +6,8 @@
 
 import {createRoot} from "react-dom/client"
 import {StrictMode} from "react"
-import "./main.css"
 import App from "./App.jsx"
+import "./main.css"
 
 // rendering application webframe ######################################################################################
 
