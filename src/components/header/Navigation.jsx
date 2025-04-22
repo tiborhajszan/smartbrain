@@ -1,24 +1,24 @@
 // #####################################################################################################################
 // Zero To Mastery Academy
 // Complete Web Developer in 2025: Zero to Mastery
-// Final Project :: Smart Brain :: Navigation Component Logic
+// Final Project | SmartBrain | Navigation Component Logic
 // #####################################################################################################################
-
-// imports -------------------------------------------------------------------------------------------------------------
 
 import React from "react";
 // import "./Navigation.css";
 
-// navigation component renderer ---------------------------------------------------------------------------------------
+// navigation component renderer #######################################################################################
 
 function Navigation() {
   return (
     <nav>
-      <p>Logout</p>
+      <div>LL</div>
+      <a href="#" target="_self">Logout &nbsp; &nbsp;</a>
+      <button id="nav-btn"><i className="fa fa-navicon"></i></button>
     </nav>
   );
-}
+};
 
-// exports -------------------------------------------------------------------------------------------------------------
+// exports #############################################################################################################
 
 export default Navigation;
