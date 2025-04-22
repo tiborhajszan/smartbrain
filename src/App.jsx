@@ -6,9 +6,9 @@
 
 import React from "react";
 import Navigation from "./components/header/Navigation.jsx";
-import viteLogo from "/vite.svg"
-import reactLogo from "./assets/react.svg"
-import "./App.css"
+import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
 
 // root component renderer #############################################################################################
 
@@ -18,16 +18,16 @@ function App() {
       <Navigation />
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img className="logo" src={viteLogo} alt="Vite Logo" />
+          <img src={viteLogo} alt="Vite Logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img className="logo react" src={reactLogo} alt="React Logo" />
+          <img src={reactLogo} alt="React Logo" />
         </a>
       </div>
     </>
-  )
+  );
 }
 
 // exports #############################################################################################################
 
-export default App
+export default App;

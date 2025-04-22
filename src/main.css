@@ -10,6 +10,10 @@ Final Project | SmartBrain | Application Webframe Styles
   padding: 0;
 }
 
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   font-family: system-ui, Avenir, Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -24,6 +28,9 @@ body {
   min-height: 100vh;
 }
 
-a, button {
-  -webkit-tap-highlight-color: transparent;
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 197);
+  text-align: center;
 }

@@ -1,21 +1,16 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/*######################################################################################################################
+Zero To Mastery Academy
+Complete Web Developer in 2025: Zero to Mastery
+Final Project | SmartBrain | Root Component Styles
+######################################################################################################################*/
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+img {
+  height: 125px;
+  margin: 20px;
+  transition: filter 200ms ease-in-out;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+img:hover {
+  filter: drop-shadow(0 0 20px #646cffaa);
 }
 
 @keyframes logo-spin {
@@ -27,16 +22,6 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+a:nth-of-type(2) > img {
+  animation: logo-spin infinite 20s linear;
 }
