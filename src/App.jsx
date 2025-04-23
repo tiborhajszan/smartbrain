@@ -5,6 +5,7 @@
 // #####################################################################################################################
 
 import React from "react";
+import Logo from "./components/header/Logo.jsx";
 import Navigation from "./components/header/Navigation.jsx";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
@@ -15,6 +16,7 @@ import "./App.css";
 function App() {
   return (
     <>
+      <Logo />
       <Navigation />
       <div>
         <a href="https://vite.dev" target="_blank">
