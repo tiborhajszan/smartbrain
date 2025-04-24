@@ -6,13 +6,15 @@
 
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import imgLogo from "../../assets/icons8-brain-100.png";
 import "./Logo.css";
 
 // logo component renderer #############################################################################################
 
 function Logo() {
   return (
-    <Tilt className="tilt" tiltMaxAngleX={30} tiltMaxAngleY={30} perspective={500}>
+    <Tilt className="logo-tilt" tiltMaxAngleX={30} tiltMaxAngleY={30} perspective={500}>
+      <img className="logo-img" src={imgLogo} alt="brain" />
     </Tilt>
   );
 };

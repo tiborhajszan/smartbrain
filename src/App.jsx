@@ -18,7 +18,7 @@ function App() {
     <>
       <Logo />
       <Navigation />
-      <div>
+      <div className="build-logos">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} alt="Vite Logo" />
         </a>

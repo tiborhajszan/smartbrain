@@ -4,8 +4,18 @@ Complete Web Developer in 2025: Zero to Mastery
 Final Project | SmartBrain | Logo Component Styles
 ######################################################################################################################*/
 
-.tilt {
-  width: 200px;
-  height: 200px;
-  background-color: green;
+.logo-tilt {
+  width: 100px;
+  height: 100px;
+  box-shadow: 3px 3px 15px #333;
+  border-radius: 10px;
+  padding: 10px;
+  background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
+  transform-style: preserve-3d;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  transform: translateZ(25px);
 }

@@ -4,12 +4,12 @@ Complete Web Developer in 2025: Zero to Mastery
 Final Project | SmartBrain | Root Component Styles
 ######################################################################################################################*/
 
-img {
+.build-logos > a > img {
   height: 125px;
   margin: 20px;
   transition: filter 200ms ease-in-out;
 }
-img:hover {
+.build-logos > a > img:hover {
   filter: drop-shadow(0 0 20px #646cffaa);
 }
 
@@ -22,6 +22,6 @@ img:hover {
   }
 }
 
-a:nth-of-type(2) > img {
+.build-logos > a:nth-of-type(2) > img {
   animation: logo-spin infinite 20s linear;
 }
