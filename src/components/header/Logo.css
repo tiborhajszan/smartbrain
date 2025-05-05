@@ -14,8 +14,9 @@ Final Project | SmartBrain | Logo Component Styles
   transform-style: preserve-3d;
 }
 
-.logo-img {
+.logo-tilt > img {
   width: 100px;
   height: 100px;
+  filter: drop-shadow(2px 2px 3px #333);
   transform: translateZ(25px);
 }

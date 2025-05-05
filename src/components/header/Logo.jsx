@@ -14,7 +14,7 @@ import "./Logo.css";
 function Logo() {
   return (
     <Tilt className="logo-tilt" tiltMaxAngleX={30} tiltMaxAngleY={30} perspective={500}>
-      <img className="logo-img" src={imgLogo} alt="brain" />
+      <img src={imgLogo} alt="brain" />
     </Tilt>
   );
 };

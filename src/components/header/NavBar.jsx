@@ -1,24 +1,23 @@
 // #####################################################################################################################
 // Zero To Mastery Academy
 // Complete Web Developer in 2025: Zero to Mastery
-// Final Project | SmartBrain | Navigation Component Logic
+// Final Project | SmartBrain | Navigation Bar Component Logic
 // #####################################################################################################################
 
 import React from "react";
-// import "./Navigation.css";
+import "./NavBar.css";
 
-// navigation component renderer #######################################################################################
+// navigation bar component renderer ###################################################################################
 
-function Navigation() {
+function NavBar() {
   return (
-    <nav>
-      <div>LL</div>
-      <a href="#" target="_self">Logout &nbsp; &nbsp;</a>
-      <button id="nav-btn"><i className="fa fa-navicon"></i></button>
-    </nav>
+    <ul className="nav-bar">
+      <li><a href="#" target="_self">Log Out &nbsp;<i className="fa fa-sign-out"></i></a></li>
+      <li><i className="fa fa-navicon"></i></li>
+    </ul>
   );
 };
 
 // exports #############################################################################################################
 
-export default Navigation;
+export default NavBar;

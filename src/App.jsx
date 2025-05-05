@@ -5,19 +5,19 @@
 // #####################################################################################################################
 
 import React from "react";
-import Logo from "./components/header/Logo.jsx";
-import Navigation from "./components/header/Navigation.jsx";
+import NavBar from "./components/header/NavBar.jsx";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+// import Logo from "./components/header/Logo.jsx";
 
 // root component renderer #############################################################################################
 
 function App() {
   return (
     <>
-      <Logo />
-      <Navigation />
+      {/* <Logo className="app-logo" /> */}
+      <NavBar />
       <div className="build-logos">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} alt="Vite Logo" />
