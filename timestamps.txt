@@ -2,5 +2,6 @@ Building Our Components
 -----------------------
 
 Logo Component: 09:17 > 18:36
+Input Field: 18:36 > 26:47
 
 https://icons8.com/icons/set/brain

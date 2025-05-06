@@ -6,6 +6,7 @@
 
 import React from "react";
 import NavBar from "./components/header/NavBar.jsx";
+import InputField from "./components/main/InputField.jsx";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
     <>
       {/* <Logo className="app-logo" /> */}
       <NavBar />
+      <InputField />
       <div className="build-logos">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} alt="Vite Logo" />

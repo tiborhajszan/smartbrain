@@ -1,0 +1,23 @@
+/*######################################################################################################################
+Zero To Mastery Academy
+Complete Web Developer in 2025: Zero to Mastery
+Final Project | SmartBrain | Input Field Component Styles
+######################################################################################################################*/
+
+.input-field {
+  margin-bottom: 30px;
+  background-color: yellowgreen;
+}
+
+.input-field > p {
+  margin-bottom: 30px;
+}
+
+#image-url {
+  display: block;
+  width: 70%;
+  margin: 0 auto 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
