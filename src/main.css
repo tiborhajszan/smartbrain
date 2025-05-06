@@ -26,11 +26,12 @@ a, button {
 body {
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
 }
 
 #root {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: rgb(255, 255, 197);
+  /* background-color: lemonchiffon; */
   text-align: center;
 }
