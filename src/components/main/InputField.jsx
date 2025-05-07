@@ -13,7 +13,7 @@ function InputField() {
   return (
     <div className="input-field">
       <p>
-        Enter an image URL below and click "Detect".<br />Our AI agent will find and mark human faces in the image.
+        Enter an image URL below and click "Detect". Our AI agent will find and mark human faces in the image.
       </p>
       <div>
         <input id="image-url" type="text" placeholder="Enter Image URL" />

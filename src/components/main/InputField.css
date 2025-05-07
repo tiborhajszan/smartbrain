@@ -10,47 +10,50 @@ Final Project | SmartBrain | Input Field Component Styles
 
 .input-field > p {
   margin-bottom: 30px;
-  color: black;
+  text-align: center;
+  color: white;
   font-size: 20px;
+  font-weight: 600;
 }
 
 .input-field > div {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  box-shadow: 3px 3px 10px #708090;
-  border-radius: 5px;
-  padding: 30px;
-
+  box-shadow: 3px 3px 10px #333;
+  border-radius: 10px;
+  padding: 25px 0;
   background:
-    radial-gradient(circle at 0% 50%, #60103000 9px, #612 10px, #60103000 11px) 0px 10px,
-    radial-gradient(at 100% 100%, #60103000 9px, #612 10px, #60103000 11px), #ffa826;
+    radial-gradient(circle at 0% 50%, #60103000 9px, #af4c60 10px, #60103000 11px) 0px 10px,
+    radial-gradient(at 100% 100%, #60103000 9px, #af4c60 10px, #60103000 11px), #ffa826;
   background-size: 20px 20px;
 }
 
 #image-url {
   display: block;
-  width: calc(100% - 30px);
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px #222;
-  border-radius: 5px;
+  width: calc(100% - 80px);
+  margin: 0 auto 25px;
+  box-shadow: 0 0 10px 2px #333;
+  border-radius: 10px;
   padding: 15px;
   text-align: center;
   font-size: 16px;
 }
 
 #detect-btn {
+  display: block;
   width: max(95px, 20%);
-  box-shadow: 0 0 10px #222, 0 0 5px #b0c4de inset;
-  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 2px #333, 0 0 10px #b0c4de inset;
+  border-radius: 10px;
   padding: 10px;
   background-color: steelblue;
   color: #fff;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   cursor: pointer;
 }
 #detect-btn:hover {
-  box-shadow: 0 0 10px #fff, 0 0 10px #222 inset;
+  box-shadow: 0 0 10px #333 inset;
 }
 #detect-btn:active {
   background-color: #fff;
