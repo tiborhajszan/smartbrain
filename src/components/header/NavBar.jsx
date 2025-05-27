@@ -1,20 +1,22 @@
-// #####################################################################################################################
-// Zero To Mastery Academy
-// Complete Web Developer in 2025: Zero to Mastery
-// Final Project | SmartBrain | Navigation Bar Component Logic
-// #####################################################################################################################
+//######################################################################################################################
+//  Zero To Mastery Academy
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Navigation Bar Component Logic
+//######################################################################################################################
 
 import React from "react";
+// import Logo from "./Logo.jsx";
 import "./NavBar.css";
 
 // navigation bar component renderer ###################################################################################
 
 function NavBar() {
   return (
-    <ul className="nav-bar">
-      <li><a href="#" target="_self">Log Out &nbsp;<i className="fa fa-sign-out"></i></a></li>
-      <li><i className="fa fa-navicon"></i></li>
-    </ul>
+    <div className="nav-bar">
+      <a href="#" target="_self"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</a>
+      {/* <Logo className="app-logo" /> */}
+      <i className="fa fa-navicon"></i>
+    </div>
   );
 };
 

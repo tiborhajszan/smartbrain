@@ -7,6 +7,7 @@ Final Project | SmartBrain | Logo Component Styles
 .logo-tilt {
   width: 100px;
   height: 100px;
+  margin: -100px 15px 0;
   box-shadow: 3px 3px 15px #333;
   border-radius: 10px;
   padding: 10px;

@@ -1,24 +1,24 @@
-// #####################################################################################################################
-// Zero To Mastery Academy
-// Complete Web Developer in 2025: Zero to Mastery
-// Final Project | SmartBrain | Root Component Logic
-// #####################################################################################################################
+//######################################################################################################################
+//  Zero To Mastery Academy
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Root Component Logic
+//######################################################################################################################
 
 import React from "react";
+import Logo from "./components/header/Logo.jsx";
 import NavBar from "./components/header/NavBar.jsx";
 import InputField from "./components/main/InputField.jsx";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-// import Logo from "./components/header/Logo.jsx";
 
 // root component renderer #############################################################################################
 
 function App() {
   return (
     <>
-      {/* <Logo className="app-logo" /> */}
       <NavBar />
+      <Logo className="app-logo" />
       <InputField />
       <div className="build-logos">
         <a href="https://vite.dev" target="_blank">

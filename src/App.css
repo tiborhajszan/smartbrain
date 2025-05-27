@@ -1,8 +1,15 @@
 /*######################################################################################################################
-Zero To Mastery Academy
-Complete Web Developer in 2025: Zero to Mastery
-Final Project | SmartBrain | Root Component Styles
+##  Zero To Mastery Academy
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Root Component Styles
 ######################################################################################################################*/
+
+.app-logo {
+  display: block;
+  position: relative;
+  top: 100px;
+  left: 10px;
+}
 
 .build-logos > a > img {
   height: 125px;

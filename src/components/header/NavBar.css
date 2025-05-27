@@ -1,38 +1,41 @@
 /*######################################################################################################################
-Zero To Mastery Academy
-Complete Web Developer in 2025: Zero to Mastery
-Final Project | SmartBrain | Navigation Bar Component Styles
+##  Zero To Mastery Academy
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Navigation Bar Component Styles
 ######################################################################################################################*/
 
 .nav-bar {
   position: sticky;
   top: 0;
   margin-bottom: 30px;
-  box-shadow: 0 3px 5px #708090;
-  padding: 20px 30px 24px;
+  box-shadow: 0 5px 5px #708090;
+  padding: 20px 0px 24px;
   background-color: steelblue;
-  text-align: right;
-  list-style-type: none;
-}
-
-.nav-bar > li {
-  display: inline;
   font-size: 32px;
 }
 
-.nav-bar > li > a {
-  margin-right: 60px;
+.app-logo {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+
+.nav-bar > a {
+  margin-left: 150px;
   color: #eee;
   font-weight: 700;
   text-decoration: none;
 }
 
-.fa-navicon {
+.nav-bar > .fa-navicon {
+  position: absolute;
+  top: 26px;
+  right: 30px;
   color: #eee;
   cursor: pointer;
 }
 
-.nav-bar > li > a:hover,
-.fa-navicon:hover {
+.nav-bar > a:hover,
+.nav-bar > .fa-navicon:hover {
   color: #b0c4de;
 }
