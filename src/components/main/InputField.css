@@ -1,17 +1,24 @@
 /*######################################################################################################################
-Zero To Mastery Academy
-Complete Web Developer in 2025: Zero to Mastery
-Final Project | SmartBrain | Input Field Component Styles
+##  Zero To Mastery Academy
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Input Field Component Styles
 ######################################################################################################################*/
 
 .input-field {
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.input-field > h1 {
+  margin-bottom: 33px;
+  color: #ffd658;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .input-field > p {
   margin-bottom: 30px;
-  text-align: center;
-  color: white;
+  color: #eee;
   font-size: 20px;
   font-weight: 600;
 }
@@ -19,9 +26,9 @@ Final Project | SmartBrain | Input Field Component Styles
 .input-field > div {
   width: 80%;
   margin: 0 auto;
-  box-shadow: 3px 3px 10px #333;
+  box-shadow: 0 0 10px #333;
   border-radius: 10px;
-  padding: 25px 0;
+  padding: 30px 0;
   background:
     radial-gradient(circle at 0% 50%, #60103000 9px, #af4c60 10px, #60103000 11px) 0px 10px,
     radial-gradient(at 100% 100%, #60103000 9px, #af4c60 10px, #60103000 11px), #ffa826;
@@ -30,11 +37,12 @@ Final Project | SmartBrain | Input Field Component Styles
 
 #image-url {
   display: block;
-  width: calc(100% - 80px);
-  margin: 0 auto 25px;
-  box-shadow: 0 0 10px 2px #333;
+  width: calc(100% - 90px);
+  margin: 0 auto 30px;
+  box-shadow: 0 0 10px 1px #333;
   border-radius: 10px;
   padding: 15px;
+  background-color: #eee;
   text-align: center;
   font-size: 16px;
 }
@@ -43,7 +51,7 @@ Final Project | SmartBrain | Input Field Component Styles
   display: block;
   width: max(95px, 20%);
   margin: 0 auto;
-  box-shadow: 0 0 10px 2px #333, 0 0 10px #b0c4de inset;
+  box-shadow: 0 0 10px 1px #333, 0 0 10px 1px #9cc0e4 inset;
   border-radius: 10px;
   padding: 10px;
   background-color: steelblue;
@@ -53,9 +61,11 @@ Final Project | SmartBrain | Input Field Component Styles
   cursor: pointer;
 }
 #detect-btn:hover {
-  box-shadow: 0 0 10px #333 inset;
+  background-color: #eee;
+  color: steelblue;
 }
 #detect-btn:active {
-  background-color: #fff;
-  color: steelblue;
+  box-shadow: 2px 2px 10px #333 inset, -2px -2px 10px #9cc0e4 inset;
+  padding: 10.5px;
+  font-size: 19px;
 }
