@@ -4,19 +4,12 @@
 ##  Final Project | SmartBrain | Root Component Styles
 ######################################################################################################################*/
 
-.app-logo {
-  display: block;
-  position: relative;
-  top: 100px;
-  left: 10px;
-}
-
-.build-logos > a > img {
+.build-logos img {
   height: 125px;
   margin: 20px;
-  transition: filter 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
-.build-logos > a > img:hover {
+.build-logos img:hover {
   filter: drop-shadow(0 0 20px #646cffaa);
 }
 
@@ -29,6 +22,6 @@
   }
 }
 
-.build-logos > a:last-of-type > img {
-  animation: logo-spin infinite 20s linear;
+.build-logos > a:last-child > img {
+  animation: logo-spin 20s linear infinite;
 }

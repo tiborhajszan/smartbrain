@@ -5,7 +5,7 @@
 //######################################################################################################################
 
 import React from "react";
-// import Logo from "./Logo.jsx";
+import Logo from "./Logo.jsx";
 import "./NavBar.css";
 
 // navigation bar component renderer ###################################################################################
@@ -13,8 +13,8 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div className="nav-bar">
+      <Logo />
       <a href="#" target="_self"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</a>
-      {/* <Logo className="app-logo" /> */}
       <i className="fa fa-navicon"></i>
     </div>
   );
