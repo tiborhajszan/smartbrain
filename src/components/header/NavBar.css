@@ -8,28 +8,33 @@
   position: sticky;
   top: 0;
   margin-bottom: 40px;
-  box-shadow: 0 5px 5px #708090;
+  box-shadow: 0 5px 8px #2b6ba0;
   padding: 30px 0 36px;
   background-color: steelblue;
-  font-size: 32px;
 }
 
 .nav-bar > a {
   margin-left: 180px;
   color: #eee;
+  font-size: 32px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .nav-bar > i {
   position: absolute;
-  top: 38px;
+  top: 30px;
   right: 40px;
   color: #eee;
+  font-size: 48px;
   cursor: pointer;
 }
 
 .nav-bar > a:hover,
 .nav-bar > i:hover {
-  color: #b0c4de;
+  color: #9cc3e4;
+}
+.nav-bar > a:active,
+.nav-bar > i:active {
+  color: #ffd658;
 }

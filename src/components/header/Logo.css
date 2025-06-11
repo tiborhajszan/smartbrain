@@ -10,7 +10,7 @@
   left: 20px;
   width: 100px;
   height: 100px;
-  box-shadow: 3px 3px 15px #333;
+  box-shadow: 0 5px 15px #12538a;
   border-radius: 10px;
   padding: 10px;
   background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
@@ -20,6 +20,6 @@
 .logo-tilt > img {
   width: 100px;
   height: 100px;
-  filter: drop-shadow(2px 2px 3px #333);
+  filter: drop-shadow(0 0 3px #333);
   transform: translateZ(25px);
 }
