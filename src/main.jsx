@@ -6,6 +6,7 @@
 
 import {createRoot} from "react-dom/client";
 import {StrictMode} from "react";
+import Particles from "particles-bg";
 import App from "./App.jsx";
 import "./main.css";
 
@@ -13,6 +14,7 @@ import "./main.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Particles bg={true} color="#dddddd" type="cobweb" num={150} />
     <App />
   </StrictMode>
 );
