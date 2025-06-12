@@ -1,7 +1,7 @@
 /*######################################################################################################################
-Zero To Mastery Academy
-Complete Web Developer in 2025: Zero to Mastery
-Final Project | SmartBrain | Application Webframe Styles
+##  Zero To Mastery Academy
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Application Webframe Styles
 ######################################################################################################################*/
 
 * {
@@ -14,8 +14,10 @@ a, button {
   -webkit-tap-highlight-color: transparent;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
