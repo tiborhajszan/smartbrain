@@ -7,9 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-  margin: 0;
-  border: none;
-  padding: 0;
+  margin: 0; border: none; padding: 0;
 }
 
 a, button {
@@ -26,14 +24,13 @@ a, button {
 }
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: 320px; min-height: 100vh;
   background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
 }
 
 #root {
-  max-width: 1440px;
+  display: flex;
+  min-width: 320px; max-width: 1440px; min-height: 100vh;
   margin: 0 auto;
-  /* background-color: lemonchiffon; */
-  /* text-align: center; */
+  flex-direction: column; justify-content: space-between;
 }

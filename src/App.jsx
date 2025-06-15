@@ -4,32 +4,19 @@
 //  Final Project | SmartBrain | Root Component Logic
 //######################################################################################################################
 
-import React from "react";
 import NavBar from "./components/header/NavBar.jsx";
 import InputField from "./components/main/InputField.jsx";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
+import FooterBar from "./components/footer/FooterBar.jsx";
 import "./App.css";
 
 // root component renderer #############################################################################################
 
-function App() {
+export default function App() {
   return (
     <>
       <NavBar />
       <InputField />
-      <div className="build-logos">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} alt="Vite Logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} alt="React Logo" />
-        </a>
-      </div>
+      <FooterBar />
     </>
   );
 };
-
-// exports #############################################################################################################
-
-export default App;
