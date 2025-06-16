@@ -1,9 +1,9 @@
 //######################################################################################################################
-//  Zero To Mastery Academy
 //  Complete Web Developer in 2025: Zero to Mastery
 //  Final Project | SmartBrain | Footer Bar Component Logic
 //######################################################################################################################
 
+import Links from "./Links.jsx";
 import Copyright from "./Copyright.jsx";
 import viteLogo from "/vite.svg";
 import reactLogo from "/src/assets/react.svg";
@@ -14,6 +14,7 @@ import "./FooterBar.css";
 export default function FooterBar() {
   return (
     <footer>
+      <Links />
       <Copyright />
       <a href="https://vite.dev" target="_blank">
         <img src={viteLogo} alt="Vite Logo" />

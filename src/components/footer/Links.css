@@ -1,0 +1,32 @@
+/*######################################################################################################################
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Links Component Styles
+######################################################################################################################*/
+
+.links p {
+  margin-bottom: 25px;
+  color: #ffd658; font-size: 16px; font-weight: 700; text-transform: uppercase;
+}
+
+.links ul {
+  list-style: none;
+}
+.links li {
+  margin-bottom: 10px;
+}
+.links li:nth-of-type(3) {
+  margin-bottom: 25px;
+}
+.links li:last-of-type {
+  margin-bottom: 0;
+}
+
+.links a {
+  color: #eee; font-size: 16px; font-weight: 600; text-decoration: none;
+}
+.links a:hover {
+  color: #6aa0cc;
+}
+.links a:active {
+  color: #ffd658;
+}
