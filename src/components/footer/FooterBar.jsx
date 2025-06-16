@@ -5,8 +5,7 @@
 
 import Links from "./Links.jsx";
 import Copyright from "./Copyright.jsx";
-import viteLogo from "/vite.svg";
-import reactLogo from "/src/assets/react.svg";
+import Tools from "./Tools.jsx";
 import "./FooterBar.css";
 
 // footer bar component renderer #######################################################################################
@@ -16,12 +15,7 @@ export default function FooterBar() {
     <footer>
       <Links />
       <Copyright />
-      <a href="https://vite.dev" target="_blank">
-        <img src={viteLogo} alt="Vite Logo" />
-      </a>
-      <a href="https://react.dev" target="_blank">
-        <img src={reactLogo} alt="React Logo" />
-      </a>
+      <Tools />
     </footer>
   );
 };

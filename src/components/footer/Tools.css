@@ -1,0 +1,27 @@
+/*######################################################################################################################
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Tools Component Styles
+######################################################################################################################*/
+
+.tools p {
+  margin-bottom: 25px;
+  color: #ffd658; font-size: 16px; font-weight: 700; text-transform: uppercase;
+}
+
+.tools ul {
+  list-style: none;
+}
+.tools li:last-of-type {
+  margin-bottom: 25px;
+}
+
+.tools a {
+  color: #eee; font-size: 16px; font-weight: 600; text-decoration: none;
+}
+.tools a:hover {
+  color: #6aa0cc;
+}
+.tools a:active {
+  color: #ffd658;
+}
+
