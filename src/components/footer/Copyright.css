@@ -1,11 +1,27 @@
 /*######################################################################################################################
-##  Zero To Mastery Academy
 ##  Complete Web Developer in 2025: Zero to Mastery
 ##  Final Project | SmartBrain | Copyright Component Styles
 ######################################################################################################################*/
 
 .copyright {
-  padding: 20px;
-  background-color: navajowhite;
   text-align: center;
+}
+
+.copyright a {
+  color: #eee; font-size: 16px; font-weight: 400; text-decoration: none;
+}
+.copyright a:first-of-type {
+  display: block;
+  margin-bottom: 10px;
+}
+.copyright a:hover {
+  color: #6aa0cc;
+}
+.copyright a:active {
+  color: #ffd658;
+}
+
+.copyright p {
+  margin-bottom: 10px;
+  color: #ffd658; font-size: 16px; font-weight: 700;
 }
