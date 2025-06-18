@@ -3,8 +3,8 @@
 //  Final Project | SmartBrain | Footer Bar Component Logic
 //######################################################################################################################
 
-import Links from "./Links.jsx";
 import Copyright from "./Copyright.jsx";
+import Links from "./Links.jsx";
 import Tools from "./Tools.jsx";
 import "./FooterBar.css";
 
@@ -13,9 +13,11 @@ import "./FooterBar.css";
 export default function FooterBar() {
   return (
     <footer>
-      <Links />
-      <Copyright />
-      <Tools />
+      <div>
+        <Copyright />
+        <Links />
+        <Tools />
+      </div>
     </footer>
   );
 };

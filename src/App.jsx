@@ -6,7 +6,7 @@
 
 import NavBar from "./components/header/NavBar.jsx";
 import InputField from "./components/main/InputField.jsx";
-import FooterBar from "./components/footer/FooterBar.jsx";
+import FooterBar from "./footer/FooterBar.jsx";
 import "./App.css";
 
 // root component renderer #############################################################################################

@@ -12,22 +12,31 @@ export default function Links() {
   // links array -------------------------------------------------------------------------------------------------------
 
   const linksArray = [
-    {key: "1", href: "https://github.com/tiborhajszan/smartbrain", text: "SmartBrain Frontend Repo"},
-    {key: "2", href: "https://github.com/tiborhajszan/smartbrain-api", text: "SmartBrain Backend Repo"},
-    {key: "3", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "WebDev Course Home"},
-    {key: "4", href: "https://www.linkedin.com/in/tibor-hajszan", text: "My LinkedIn"},
-    {key: "5", href: "https://github.com/tiborhajszan", text: "My GitHub"},
-    {key: "6", href: "#", text: "My Portfolio"}
+    {key: "l1", href: "https://github.com/tiborhajszan/smartbrain", text: "SmartBrain Frontend Repo"},
+    {key: "l2", href: "https://github.com/tiborhajszan/smartbrain-api", text: "SmartBrain Backend Repo"},
+    {key: "l3", href: "#", text: "SmartBrain By ZtM"},
+    {key: "l4", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "Web Developer Course"}
+  ];
+
+  // icons array -------------------------------------------------------------------------------------------------------
+
+  const iconsArray = [
+    {key: "i1", href: "https://www.linkedin.com/in/tibor-hajszan", class: "fa fa-linkedin"},
+    {key: "i2", href: "https://github.com/tiborhajszan", class: "fa fa-github"},
+    {key: "i3", href: "#", class: "fa fa-briefcase"}
   ];
 
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
     <div className="links">
-      <p>Quick Links</p>
+      <p>Quick&nbsp;&nbsp;Links</p>
       <ul>{linksArray.map(link => {
         return <li key={link.key}><a href={link.href} target="_blank">{link.text}</a></li>;
       })}</ul>
+      <div>{iconsArray.map(icon => {
+        return <a key={icon.key} href={icon.href} target="_blank"><i className={icon.class}></i></a>;
+      })}</div>
     </div>
   );
 };
