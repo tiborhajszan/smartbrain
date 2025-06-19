@@ -29,8 +29,8 @@ body {
 }
 
 #root {
-  display: flex;
+  display: flex; flex-direction: column;
   min-width: 320px; max-width: 1440px; min-height: 100vh;
   margin: 0 auto;
-  flex-direction: column; justify-content: space-between;
+  justify-content: space-between; gap: 60px;
 }

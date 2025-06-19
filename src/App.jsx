@@ -5,7 +5,7 @@
 //######################################################################################################################
 
 import NavBar from "./components/header/NavBar.jsx";
-import InputField from "./components/main/InputField.jsx";
+import FaceDetector from "./main/FaceDetector.jsx";
 import FooterBar from "./footer/FooterBar.jsx";
 import "./App.css";
 
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <InputField />
+      <FaceDetector />
       <FooterBar />
     </>
   );
