@@ -1,5 +1,4 @@
 //######################################################################################################################
-//  Zero To Mastery Academy
 //  Complete Web Developer in 2025: Zero to Mastery
 //  Final Project | SmartBrain | Navigation Bar Component Logic
 //######################################################################################################################
@@ -15,7 +14,7 @@ export default function NavBar() {
 
   // reference and state -----------------------------------------------------------------------------------------------
 
-  const refIcon = useRef(null);
+  const refSpan = useRef(null);
   const refProfile = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const toggleProfile = () => setIsOpen(!isOpen);
@@ -24,7 +23,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!refIcon.current.contains(event.target)
+      if (!refSpan.current.contains(event.target)
       && !refProfile.current.contains(event.target)) {
         setIsOpen(false);
       };
@@ -33,14 +32,17 @@ export default function NavBar() {
     return () => {document.removeEventListener("mousedown", handleClickOutside);};
   });
 
-  // render ------------------------------------------------------------------------------------------------------------
+  // rendering ---------------------------------------------------------------------------------------------------------
 
   return (
-    <div className="nav-bar">
+    <nav>
       <Logo />
       <a href="#" target="_self"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</a>
-      <i ref={refIcon} className="fa fa-user" onClick={toggleProfile}></i>
-      <Profile ref={refProfile} profileOpen={isOpen} />
-    </div>
+      <span ref={refSpan} onClick={toggleProfile}><i className="fa fa-user"></i></span>
+      <Profile
+        ref={refProfile} profileOpen={isOpen}
+        userName={"Tibor Hajszan"} detectCount={"#110"} lastLogin={"2025.06.23"}
+      />
+    </nav>
   );
 };

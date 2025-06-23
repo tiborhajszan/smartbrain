@@ -1,0 +1,27 @@
+/*######################################################################################################################
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Navigation Bar Component Styles
+######################################################################################################################*/
+
+nav { /*--------------------------------------------------------------------------------------------------------------*/
+  position: sticky; top: 0; left: 0; display: flex; flex-wrap: wrap;
+  box-shadow: 0 5px 8px #2b6ba0; padding: 20px 30px;
+  background-color: steelblue;
+  justify-content: space-between; align-items: center;
+}
+
+nav > a { /*----------------------------------------------------------------------------------------------------------*/
+  color: #eee; font-size: 32px; font-weight: 700; text-decoration: none;
+}
+nav > span {
+  color: #eee; font-size: 48px; cursor: pointer;
+}
+
+nav > a:hover,
+nav > span:hover { /*-------------------------------------------------------------------------------------------------*/
+  color: #ffd658;
+}
+nav > a:active,
+nav > span:active {
+  color: #ff8a58;
+}

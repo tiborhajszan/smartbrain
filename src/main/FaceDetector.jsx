@@ -12,7 +12,6 @@ import "./FaceDetector.css";
 export default function FaceDetector() {
   return (
     <main>
-      {/* <h1>SmartBrain Face Detector</h1> */}
       <p>Enter an image URL and click "Detect". SmartBrain will find and mark human faces in your image.</p>
       <InputField />
       <img src={aiFace} alt="Analyzed Image" />
