@@ -7,11 +7,11 @@ import "./InputField.css";
 
 // input field component renderer ######################################################################################
 
-export default function InputField() {
+export default function InputField(props) {
   return (
     <div className="input-field">
-      <input id="image-url" type="text" placeholder="Enter Image URL" />
-      <button id="detect-btn">Detect</button>
+      <input type="text" placeholder="Enter Image URL" />
+      <button onClick={props.callBack}>Detect</button>
     </div>
   );
 };
