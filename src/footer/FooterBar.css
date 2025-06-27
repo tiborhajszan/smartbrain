@@ -5,16 +5,16 @@
 
 footer {
   box-shadow: 0 -5px 8px #333;
-  padding: 30px;
   background-color: #333;
 }
 
 footer > div {
   width: 100%;
-  max-width: 1440px;
+  max-width: calc(1440px - 60px);
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 30px;
   justify-content: center;
   align-items: flex-start;
   gap: 60px;

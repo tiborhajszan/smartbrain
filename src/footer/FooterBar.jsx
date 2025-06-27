@@ -5,7 +5,7 @@
 
 import Copyright from "./Copyright.jsx";
 import Links from "./Links.jsx";
-import Tools from "./Tools.jsx";
+import FrontEnd from "./FrontEnd.jsx";
 import BackEnd from "./BackEnd.jsx";
 import "./FooterBar.css";
 
@@ -17,7 +17,7 @@ export default function FooterBar() {
       <div>
         <Copyright />
         <Links />
-        <Tools />
+        <FrontEnd />
         <BackEnd />
       </div>
     </footer>

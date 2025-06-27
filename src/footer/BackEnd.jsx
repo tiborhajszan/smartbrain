@@ -12,7 +12,7 @@ import "./BackEnd.css";
 
 export default function BackEnd() {
 
-  // backend stack -----------------------------------------------------------------------------------------------------
+  // back end stack ----------------------------------------------------------------------------------------------------
 
   const backendArray = [
     {key: "be1", href: "https://www.clarifai.com", text: "Clarifai API"},
