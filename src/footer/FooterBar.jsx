@@ -4,7 +4,7 @@
 //######################################################################################################################
 
 import Copyright from "./Copyright.jsx";
-import Links from "./Links.jsx";
+import QuickLinks from "./QuickLinks.jsx";
 import FrontEnd from "./FrontEnd.jsx";
 import BackEnd from "./BackEnd.jsx";
 import "./FooterBar.css";
@@ -16,7 +16,7 @@ export default function FooterBar() {
     <footer>
       <div>
         <Copyright />
-        <Links />
+        <QuickLinks />
         <FrontEnd />
         <BackEnd />
       </div>

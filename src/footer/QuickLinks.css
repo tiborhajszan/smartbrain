@@ -1,0 +1,20 @@
+/*######################################################################################################################
+##  Complete Web Developer in 2025: Zero to Mastery
+##  Final Project | SmartBrain | Quick Links Component Styles
+######################################################################################################################*/
+
+.quick-links > ul > li:nth-child(3) { /*------------------------------------------------------------------------------*/
+  margin-bottom: 25px;
+}
+
+.quick-links > div { /*-----------------------------------------------------------------------------------------------*/
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+/* @media only screen and (max-width: 500px) { .links div {
+  justify-content: center;
+}} */
+.quick-links > div > a {
+  font-size: 32px;
+}

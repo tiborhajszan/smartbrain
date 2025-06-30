@@ -1,13 +1,13 @@
 //######################################################################################################################
 //  Complete Web Developer in 2025: Zero to Mastery
-//  Final Project | SmartBrain | Links Component Logic
+//  Final Project | SmartBrain | Quick Links Component Logic
 //######################################################################################################################
 
-import "./Links.css";
+import "./QuickLinks.css";
 
 // links component renderer ############################################################################################
 
-export default function Links() {
+export default function QuickLinks() {
 
   // links array -------------------------------------------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ export default function Links() {
     {key: "l1", href: "https://github.com/tiborhajszan/smartbrain", text: "SmartBrain Frontend Repo"},
     {key: "l2", href: "https://github.com/tiborhajszan/smartbrain-api", text: "SmartBrain Backend Repo"},
     {key: "l3", href: "#", text: "SmartBrain By ZtM"},
-    {key: "l4", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "Web Developer Course"}
+    {key: "l4", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "Course Notes & Projects"}
   ];
 
   // icons array -------------------------------------------------------------------------------------------------------
@@ -29,8 +29,8 @@ export default function Links() {
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
-    <div className="links">
-      <p>Quick&nbsp;&nbsp;Links</p>
+    <div className="footer-item quick-links">
+      <h2>Quick&nbsp;&nbsp;Links</h2>
       <ul>{linksArray.map(link => {
         return <li key={link.key}><a href={link.href} target="_blank">{link.text}</a></li>;
       })}</ul>

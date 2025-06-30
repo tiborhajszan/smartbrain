@@ -3,35 +3,27 @@
 ##  Final Project | SmartBrain | Copyright Component Styles
 ######################################################################################################################*/
 
-.copyright img { /*---------------------------------------------------------------------------------------------------*/
-  display: block; height: 50px;
-  margin: 0 auto 15px;
-}
-
-.copyright a { /*-----------------------------------------------------------------------------------------------------*/
+.copyright > img { /*-------------------------------------------------------------------------------------------------*/
   display: block;
-  margin-bottom: 50px;
-  color: #eee; font-size: 16px; font-weight: 400; text-decoration: none;
-}
-@media only screen and (max-width: 900px) { .copyright a {
-  margin-bottom: 10px;
-}}
-.copyright a:hover {
-  color: #6aa0cc;
-}
-.copyright a:active {
-  color: #ff8a58;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
 }
 
-.copyright p { /*-----------------------------------------------------------------------------------------------------*/
+.copyright > a { /*---------------------------------------------------------------------------------------------------*/
+  display: block;
+  margin-bottom: 25px;
+}
+.copyright > a:last-child {
+  margin-bottom: 0;
+}
+.copyright > p {
   margin-bottom: 10px;
-  color: #ffd658; font-size: 16px; font-weight: 700;
+  color: #ffd658;
+  font-size: 16px;
+  font-weight: 700;
 }
 .copyright a,
 .copyright p {
   text-align: center;
-}
-
-.copyright a:last-of-type { /*----------------------------------------------------------------------------------------*/
-  margin-bottom: 0;
 }
