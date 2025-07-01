@@ -10,8 +10,8 @@ import "./InputField.css";
 export default function InputField(props) {
   return (
     <div className="input-field">
-      <input type="text" placeholder="Enter Image URL" />
-      <button onClick={props.callBack}>Detect</button>
+      <input ref={props.refInput} type="search" placeholder="Enter Image URL" />
+      <button onClick={props.callDetect}>Detect</button>
     </div>
   );
 };

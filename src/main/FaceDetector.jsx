@@ -4,7 +4,7 @@
 //######################################################################################################################
 
 import {useRef, useState} from "react";
-import InputField from "./InputField";
+import InputField from "./InputField.jsx";
 import aiFace from "/src/assets/face.jpg";
 import "./FaceDetector.css";
 
@@ -14,13 +14,21 @@ export default function FaceDetector() {
 
   // ref and state -----------------------------------------------------------------------------------------------------
 
-  const refImage = useRef(null);
+  const inputRef = useRef(null);
+  const imageRef = useRef(null);
   const [imageUrl, setImageUrl] = useState(aiFace);
 
   // detect onclick callback -------------------------------------------------------------------------------------------
 
   function onDetect() {
-    window.scrollTo({top: refImage.current.offsetTop - 158, behavior: "smooth"});
+    if (inputRef.current.value === ""
+    && imageUrl !== aiFace) {
+      setImageUrl(aiFace);
+      return;
+    };
+    if (inputRef.current.value === imageUrl) return;
+    setImageUrl(inputRef.current.value);
+    window.scrollTo({top: imageRef.current.offsetTop - 158, behavior: "smooth"});
   };
 
   // rendering component -----------------------------------------------------------------------------------------------
@@ -28,8 +36,8 @@ export default function FaceDetector() {
   return (
     <main>
       <p>Enter an image URL and click "Detect". SmartBrain will find and mark human faces in your image.</p>
-      <InputField callBack={onDetect} />
-      <img ref={refImage} src={imageUrl} alt="Analyzed Image" />
+      <InputField refInput={inputRef} callDetect={onDetect} />
+      <img ref={imageRef} src={imageUrl} alt="Analyzed Image" />
     </main>
   );
 };
