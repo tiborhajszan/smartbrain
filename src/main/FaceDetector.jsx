@@ -15,19 +15,15 @@ export default function FaceDetector() {
   // ref and state -----------------------------------------------------------------------------------------------------
 
   const inputRef = useRef(null);
-  const imageRef = useRef(null);
   const [imageUrl, setImageUrl] = useState(aiFace);
+  const imageRef = useRef(null);
 
   // detect onclick callback -------------------------------------------------------------------------------------------
 
   function onDetect() {
-    if (inputRef.current.value === ""
-    && imageUrl !== aiFace) {
-      setImageUrl(aiFace);
-      return;
-    };
     if (inputRef.current.value === imageUrl) return;
-    setImageUrl(inputRef.current.value);
+    if (inputRef.current.value === "") setImageUrl(aiFace);
+    else setImageUrl(inputRef.current.value);
     window.scrollTo({top: imageRef.current.offsetTop - 158, behavior: "smooth"});
   };
 
