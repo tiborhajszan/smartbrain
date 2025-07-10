@@ -10,7 +10,7 @@ import "./NavBar.css";
 
 // navigation bar component renderer ###################################################################################
 
-export default function NavBar() {
+export default function NavBar(props) {
 
   // reference and state -----------------------------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ export default function NavBar() {
   // rendering ---------------------------------------------------------------------------------------------------------
 
   return (
-    <nav>
+    <nav ref={props.refNav}>
       <Logo />
       <a href="#" target="_self"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</a>
       <span ref={refSpan} onClick={toggleProfile}><i className="fa fa-user"></i></span>
