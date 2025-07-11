@@ -1,66 +1,52 @@
 //######################################################################################################################
 //  Complete Web Developer in 2025: Zero to Mastery
-//  Final Project | SmartBrain | Clarifai gRPC API Node.js Client
+//  Final Project | SmartBrain | Clarifai REST API Client
 //######################################################################################################################
 
-import { Model } from "clarifai-nodejs";
+const USER_ID = "clarifai";
+const APP_ID = "main";
+const IMAGE_URL = "https://samples.clarifai.com/metro-north.jpg";
+const PAT = "c630d23f71d34c849dfd0602898d3e8d";
+const MODEL_ID = "face-detection";
 
-/**
-    Your PAT (Personal Access Token) can be found in the Account's Security section
-    Specify the correct userId/appId pairings
-    Since you're making inferences outside your app's scope
-    USER_ID = "clarifai"
-    APP_ID = "main"
+// clarifai client function ############################################################################################
 
-    You can set the model using model URL or model ID.
-    Change these to whatever model you want to use
-    eg : MODEL_ID = "general-image-recognition"
-    You can also set a particular model version by specifying the  version ID
-    eg: MODEL_VERSION_ID = "aa7f35c01e0642fda5cf400f543e7c40"
-    Model class objects can be initialised by providing its URL or also by defining respective userId, appId and modelId
+export default async function ClarifaiClient(IMAGE_URL) {
 
-    eg : 
-    const model = new Model({
-        authConfig: {
-            userId: "clarifai",
-            appId: "main",
-            pat: process.env.CLARIFAI_PAT,
-        },
-        modelId: MODEL_ID,
-    });
+  // setting request body ----------------------------------------------------------------------------------------------
 
-*/
+  const requestBody = JSON.stringify({
+    "user_app_id": {"user_id": USER_ID, "app_id": APP_ID},
+    "inputs": [{"data": {"image": {"url": IMAGE_URL}}}]
+  });
 
+  // setting request options -------------------------------------------------------------------------------------------
 
-const modelUrl =
-  "https://clarifai.com/clarifai/main/models/general-image-recognition";
-const imageUrl = "https://samples.clarifai.com/metro-north.jpg";
+  const requestOptions = {
+    method: "POST",
+    headers: {"Accept": "application/json", "Authorization": "Key " + PAT},
+    body: requestBody
+  };
 
-const model = new Model({
-  url: modelUrl,
-  authConfig: {
-    pat: process.env.CLARIFAI_PAT,
-  },
-});
-/*
-        The predict API gives flexibility to generate predictions for data provided through URL, Filepath and bytes format.
+  // api call ----------------------------------------------------------------------------------------------------------
 
-        Example for prediction through Bytes:
-        const modelPrediction = await model.predictByBytes({
-                                    inputBytes: Bytes,
-                                    inputType: "image"
-                                });
+  const apiResponse = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
+  if (!apiResponse.ok) throw new Error("Bad API response");
+  const responseObj = apiResponse.json();
+  // if (responseObj.status.code !== 10000) throw new Error("Bad model response");
+  return responseObj;
 
-        Example for prediction through Filepath:
-        const modelPrediction = await model.predictByFilepath({
-                                    filepath,
-                                    inputType: "image",
-                                });
-*/
+    //   const regions = resultObj.outputs[0].data.regions;
 
-const modelPrediction = await model.predictByUrl({
-  url: imageUrl,
-  inputType: "image",
-});
-
-console.log(modelPrediction?.[0].data);
+    //   regions.forEach(region => {
+    //     // Accessing and rounding the bounding box values
+    //     const boundingBox = region.region_info.bounding_box;
+    //     const topRow = boundingBox.top_row.toFixed(3);
+    //     const leftCol = boundingBox.left_col.toFixed(3);
+    //     const bottomRow = boundingBox.bottom_row.toFixed(3);
+    //     const rightCol = boundingBox.right_col.toFixed(3);
+    //     console.log(`BBox: ${topRow}, ${leftCol}, ${bottomRow}, ${rightCol}`);
+    //   });
+    // })
+    // .catch(error => console.log('error', error));
+};

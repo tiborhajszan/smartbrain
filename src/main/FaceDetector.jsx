@@ -5,8 +5,8 @@
 
 import {useRef, useState, useEffect} from "react";
 import InputField from "./InputField.jsx";
-import {Model} from "clarifai-nodejs";
 import aiFace from "/src/assets/face.jpg";
+import ClarifaiClient from "./ClarifaiClient.js";
 import "./FaceDetector.css";
 
 // face detector component renderer ####################################################################################
@@ -37,13 +37,12 @@ export default function FaceDetector(props) {
     return;
   };
 
-  // image handler -----------------------------------------------------------------------------------------------------
+  // image handler effect ----------------------------------------------------------------------------------------------
 
   useEffect(() => {
     if (imageUrl === aiFace) return;
-    // const clarifaiCall = async () => await gRpcClient(imageUrl);
-    // const faceRegions = clarifaiCall();
-    // console.log(faceRegions);
+    const faceRegions = ClarifaiClient(imageUrl);
+    console.log(faceRegions);
     const navHeight = props.refNav.current.getBoundingClientRect().height;
     window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
     return;
@@ -55,7 +54,7 @@ export default function FaceDetector(props) {
     <main>
       <p>Enter an image URL and click "Detect". SmartBrain will find and mark human faces in your image.</p>
       <InputField refInput={inputRef} pressEnter={onEnter} clickDetect={onDetect} />
-      <img id="face-image" ref={imageRef} src={imageUrl} alt="Analyzed Image" />
+      <img ref={imageRef} src={imageUrl} alt="Analyzed Image" />
     </main>
   );
 };
