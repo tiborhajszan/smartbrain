@@ -4,9 +4,8 @@
 //######################################################################################################################
 
 import {useRef, useState, useEffect} from "react";
-const {grpc, ClarifaiStub} = require("clarifai-nodejs-grpc");
 import InputField from "./InputField.jsx";
-// import gRpcClient from "./ClarifaiGrpc.jsx";
+import {Model} from "clarifai-nodejs";
 import aiFace from "/src/assets/face.jpg";
 import "./FaceDetector.css";
 
