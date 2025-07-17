@@ -3,13 +3,12 @@
 //  Final Project | SmartBrain | Clarifai REST API Client
 //######################################################################################################################
 
+const MODEL_ID = "face-detection";
+const PAT = "c630d23f71d34c849dfd0602898d3e8d";
 const USER_ID = "clarifai";
 const APP_ID = "main";
-const IMAGE_URL = "https://samples.clarifai.com/metro-north.jpg";
-const PAT = "c630d23f71d34c849dfd0602898d3e8d";
-const MODEL_ID = "face-detection";
 
-// clarifai client function ############################################################################################
+// clarifai api client function ########################################################################################
 
 export default async function ClarifaiClient(IMAGE_URL) {
 
@@ -30,13 +29,10 @@ export default async function ClarifaiClient(IMAGE_URL) {
 
   // api call ----------------------------------------------------------------------------------------------------------
 
-  const apiResponse = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
-  if (!apiResponse.ok) throw new Error("Bad API response");
-  const responseObj = apiResponse.json();
-  // if (responseObj.status.code !== 10000) throw new Error("Bad model response");
-  return responseObj;
-
-    //   const regions = resultObj.outputs[0].data.regions;
+  const fetchResponse = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
+  const responseObj = await fetchResponse.json();
+  if (responseObj.status.code !== 10000) throw new Error(responseObj.status.description);
+  return responseObj.outputs[0].data.regions;
 
     //   regions.forEach(region => {
     //     // Accessing and rounding the bounding box values

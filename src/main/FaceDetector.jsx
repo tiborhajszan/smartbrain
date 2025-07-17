@@ -41,10 +41,16 @@ export default function FaceDetector(props) {
 
   useEffect(() => {
     if (imageUrl === aiFace) return;
-    const faceRegions = ClarifaiClient(imageUrl);
-    console.log(faceRegions);
-    const navHeight = props.refNav.current.getBoundingClientRect().height;
-    window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
+    const apiResponse = ClarifaiClient(imageUrl);
+    apiResponse.then(faceRegions => {
+      console.log(faceRegions);
+    });
+    apiResponse.catch(error => {
+      inputRef.current.value = "API Error : " + error.message + ".";
+      setImageUrl(aiFace);
+    });
+    // const navHeight = props.refNav.current.getBoundingClientRect().height;
+    // window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
     return;
   }, [imageUrl, props.refNav]);
 
