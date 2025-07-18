@@ -9,31 +9,51 @@ import aiFace from "/src/assets/face.jpg";
 import ClarifaiClient from "./ClarifaiClient.js";
 import "./FaceDetector.css";
 
+const BASE_PROMPT = "Enter an image URL and click \"Detect\". SmartBrain will find and mark human faces in your image.";
+
 // face detector component renderer ####################################################################################
 
 export default function FaceDetector(props) {
 
   // ref and state -----------------------------------------------------------------------------------------------------
 
+  const [prompt, setPrompt] = useState(BASE_PROMPT);
   const inputRef = useRef(null);
-  const [imageUrl, setImageUrl] = useState(aiFace);
   const imageRef = useRef(null);
+  const [imageUrl, setImageUrl] = useState(aiFace);
+  const [faceRegions, setFaceRegions] = useState([]);
 
   // press enter callback ----------------------------------------------------------------------------------------------
 
   function onEnter(event) {
-    if (event.keyCode === 13) onDetect();
+    if (event.keyCode === 13) clickDetect();
     return;
   };
 
   // click detect callback ---------------------------------------------------------------------------------------------
 
-  function onDetect() {
+  function clickDetect() {
+
+    // no action cases .................................................................................................
     if (inputRef.current.value === "" && imageUrl === aiFace) return;
     if (inputRef.current.value === imageUrl) return;
-    if (inputRef.current.value.startsWith("Error")) return;
-    if (inputRef.current.value === "") setImageUrl(aiFace);
-    else setImageUrl(inputRef.current.value);
+
+    // api call ........................................................................................................
+    const apiResponse = ClarifaiClient(imageUrl);
+
+    // detect success ..................................................................................................
+    apiResponse.then(regions => {
+      setPrompt(BASE_PROMPT);
+      setImageUrl(inputRef.current.value);
+      setFaceRegions(regions);
+    });
+
+    apiResponse.catch(error => {
+      inputRef.current.value = "API Error : " + error.message + ".";
+      setImageUrl(aiFace);
+    });
+
+
     return;
   };
 
@@ -41,14 +61,6 @@ export default function FaceDetector(props) {
 
   useEffect(() => {
     if (imageUrl === aiFace) return;
-    const apiResponse = ClarifaiClient(imageUrl);
-    apiResponse.then(faceRegions => {
-      console.log(faceRegions);
-    });
-    apiResponse.catch(error => {
-      inputRef.current.value = "API Error : " + error.message + ".";
-      setImageUrl(aiFace);
-    });
     // const navHeight = props.refNav.current.getBoundingClientRect().height;
     // window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
     return;
@@ -58,8 +70,8 @@ export default function FaceDetector(props) {
 
   return (
     <main>
-      <p>Enter an image URL and click "Detect". SmartBrain will find and mark human faces in your image.</p>
-      <InputField refInput={inputRef} pressEnter={onEnter} clickDetect={onDetect} />
+      <p>{prompt}</p>
+      <InputField refInput={inputRef} pressEnter={onEnter} clickDetect={clickDetect} />
       <img ref={imageRef} src={imageUrl} alt="Analyzed Image" />
     </main>
   );
