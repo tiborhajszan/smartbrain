@@ -7,6 +7,7 @@ import {useRef, useState, useEffect} from "react";
 import InputField from "./InputField.jsx";
 import aiFace from "/src/assets/ai-face.jpg";
 import ClarifaiClient from "./ClarifaiClient.js";
+import OutputField from "./OutputField.jsx";
 import "./FaceDetector.css";
 const BASE_PROMPT = "Enter an image URL and click \"Detect\". SmartBrain will find and mark human faces in your image.";
 
@@ -79,7 +80,7 @@ export default function FaceDetector(props) {
     <main>
       <p>{prompt}</p>
       <InputField refInput={inputRef} pressEnter={pressEnter} clickDetect={clickDetect} />
-      <img ref={imageRef} src={imageUrl} alt="Analyzed Image" />
+      <OutputField imageRef={imageRef} imageUrl={imageUrl} faceRegions={faceRegions} />
     </main>
   );
 };

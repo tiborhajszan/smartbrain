@@ -18,7 +18,7 @@ main > p {
   font-weight: 700;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-main > img {
+/* main > img {
   display: block;
   min-width: 260px;
   width: auto;
@@ -32,4 +32,4 @@ main > img {
 }
 main > img:hover {
   transform: scale(1.1);
-}
+} */
