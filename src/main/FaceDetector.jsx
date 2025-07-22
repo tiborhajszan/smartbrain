@@ -5,10 +5,9 @@
 
 import {useRef, useState, useEffect} from "react";
 import InputField from "./InputField.jsx";
-import aiFace from "/src/assets/face.jpg";
+import aiFace from "/src/assets/ai-face.jpg";
 import ClarifaiClient from "./ClarifaiClient.js";
 import "./FaceDetector.css";
-
 const BASE_PROMPT = "Enter an image URL and click \"Detect\". SmartBrain will find and mark human faces in your image.";
 
 // face detector component renderer ####################################################################################
@@ -25,7 +24,7 @@ export default function FaceDetector(props) {
 
   // press enter callback ----------------------------------------------------------------------------------------------
 
-  function onEnter(event) {
+  function pressEnter(event) {
     if (event.keyCode === 13) clickDetect();
     return;
   };
@@ -35,43 +34,51 @@ export default function FaceDetector(props) {
   function clickDetect() {
 
     // no action cases .................................................................................................
-    if (inputRef.current.value === "" && imageUrl === aiFace) return;
+    if (inputRef.current.value === "") {
+      setPrompt(BASE_PROMPT);
+      setImageUrl(aiFace);
+      setFaceRegions([]);
+      return;
+    };
     if (inputRef.current.value === imageUrl) return;
 
     // api call ........................................................................................................
-    const apiResponse = ClarifaiClient(imageUrl);
+    const apiResponse = ClarifaiClient(inputRef.current.value);
 
     // detect success ..................................................................................................
     apiResponse.then(regions => {
-      setPrompt(BASE_PROMPT);
+      setPrompt("Face(s) Detected!");
       setImageUrl(inputRef.current.value);
       setFaceRegions(regions);
     });
 
+    // detect failure ..................................................................................................
     apiResponse.catch(error => {
-      inputRef.current.value = "API Error : " + error.message + ".";
+      setPrompt("API Error : " + error.message);
+      inputRef.current.value = "";
       setImageUrl(aiFace);
+      setFaceRegions([]);
     });
 
-
+    // returning .......................................................................................................
     return;
   };
 
-  // image handler effect ----------------------------------------------------------------------------------------------
+  // page scroll effect ------------------------------------------------------------------------------------------------
 
   useEffect(() => {
     if (imageUrl === aiFace) return;
-    // const navHeight = props.refNav.current.getBoundingClientRect().height;
-    // window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
+    const navHeight = props.refNav.current.getBoundingClientRect().height;
+    window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
     return;
-  }, [imageUrl, props.refNav]);
+  }, [props.refNav, imageUrl]);
 
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
     <main>
       <p>{prompt}</p>
-      <InputField refInput={inputRef} pressEnter={onEnter} clickDetect={clickDetect} />
+      <InputField refInput={inputRef} pressEnter={pressEnter} clickDetect={clickDetect} />
       <img ref={imageRef} src={imageUrl} alt="Analyzed Image" />
     </main>
   );

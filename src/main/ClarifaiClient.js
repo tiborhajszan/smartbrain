@@ -33,6 +33,7 @@ export default async function ClarifaiClient(IMAGE_URL) {
   const responseObj = await fetchResponse.json();
   if (responseObj.status.code !== 10000) throw new Error(responseObj.status.description);
   return responseObj.outputs[0].data.regions;
+};
 
     //   regions.forEach(region => {
     //     // Accessing and rounding the bounding box values
@@ -45,4 +46,3 @@ export default async function ClarifaiClient(IMAGE_URL) {
     //   });
     // })
     // .catch(error => console.log('error', error));
-};
