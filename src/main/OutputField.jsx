@@ -8,10 +8,28 @@ import "./OutputField.css";
 // output field component renderer #####################################################################################
 
 export default function OutputField(props) {
+
+  // calculating face areas --------------------------------------------------------------------------------------------
+
+  const faceBoxes = props.faceRegions.map(region => {return {
+    top: (100 * region.region_info.bounding_box.top_row).toFixed(2) + "%",
+    left: (100 * region.region_info.bounding_box.left_col).toFixed(2) + "%",
+    right: (100 * (1 - region.region_info.bounding_box.right_col)).toFixed(2) + "%",
+    bottom: (100 * (1 - region.region_info.bounding_box.bottom_row)).toFixed(2) + "%"
+  }})
+  console.log(faceBoxes);
+  // const faceBoxes = [{top: "15%", left: "20%", right: "10%", bottom: "8%"}];
+
+  // rendering component -----------------------------------------------------------------------------------------------
+
   return (
-    <div className="output-field">
+    <div className="output-field"><div className="image-box">
       <img ref={props.imageRef} src={props.imageUrl} alt="Analyzed Image" />
-      {/* <button onClick={props.clickDetect}>Detect</button> */}
-    </div>
+      {faceBoxes.map((box, index) => {return (<div
+        key={index}
+        className="face-box"
+        style={{top: box.top, left: box.left, right: box.right, bottom: box.bottom}}
+      />);})}
+    </div></div>
   );
 };

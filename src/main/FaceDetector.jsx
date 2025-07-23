@@ -48,14 +48,14 @@ export default function FaceDetector(props) {
 
     // detect success ..................................................................................................
     apiResponse.then(regions => {
-      setPrompt("Face(s) Detected!");
+      setPrompt("Detect Success");
       setImageUrl(inputRef.current.value);
       setFaceRegions(regions);
     });
 
     // detect failure ..................................................................................................
     apiResponse.catch(error => {
-      setPrompt("API Error : " + error.message);
+      setPrompt("Detect Error : " + error.message);
       inputRef.current.value = "";
       setImageUrl(aiFace);
       setFaceRegions([]);

@@ -4,22 +4,34 @@
 ######################################################################################################################*/
 
 .output-field {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+.output-field > .image-box {
   display: inline-block;
-  min-width: 260px;
+  position: relative;
   max-width: 90%;
-  border: 3px solid #333;
-  padding: 5px;
   transition: all 0.3s ease-in-out;
 }
-.output-field:hover {
+.output-field > .image-box:hover {
   transform: scale(1.1);
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-.output-field > img {
+.output-field > .image-box > img {
   display: block;
-  width: 100%;
+  min-width: 260px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   max-height: 70vh;
-  /* box-shadow: 0 0 10px 1px #333; */
-  /* border-radius: 10px; */
+  box-shadow: 0 0 10px 1px #333;
+  border-radius: 10px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
+.output-field > .image-box > .face-box {
+  position: absolute;
+  box-shadow: 0 0 5px 2px #eee, 0 0 5px 2px steelblue inset;
+  border-radius: 10px;
+}
