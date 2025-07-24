@@ -80,7 +80,7 @@ export default function FaceDetector(props) {
     <main>
       <p>{prompt}</p>
       <InputField refInput={inputRef} pressEnter={pressEnter} clickDetect={clickDetect} />
-      <OutputField imageRef={imageRef} imageUrl={imageUrl} faceRegions={faceRegions} />
+      <OutputField refImage={imageRef} imageUrl={imageUrl} faceRegions={faceRegions} />
     </main>
   );
 };
