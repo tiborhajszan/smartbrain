@@ -4,7 +4,8 @@
 ######################################################################################################################*/
 
 #title {
-    position: relative; top: -25px; z-index: -1;
-    margin-left: 130px; padding-right: 10px;
-    color: #ffd658; font-size: 32px; font-weight: 900;
+    text-align: center;
+    color: #ffd658;
+    font-size: 32px;
+    font-weight: 900;
 }

@@ -9,7 +9,7 @@ import "./Profile.css";
 
 export default function Profile(props) {
   return (
-    <div ref={props.ref} className={`profile ${props.profileOpen ? "open" : "close"}`}>
+    <div ref={props.refProfile} className={`profile ${props.profileOpen ? "open" : "close"}`}>
       <p>{props.userName}</p>
       <hr />
       <p>Detect Count:<br /><span>{props.detectCount}</span></p>

@@ -1,13 +1,20 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Profile Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Profile Component Styles
+//####################################################################################################################*/
 
-.profile { /*---------------------------------------------------------------------------------------------------------*/
-  position: absolute; top: 90px; right: 50px;
+.profile {
+  position: absolute;
+  top: 90px;
+  right: 0;
   min-width: 260px;
-  box-shadow: 0 5px 15px #2b6ba0; padding: 15px 30px;
-  border-top: 1px solid #9cc3e4; border-left: 1px solid #9cc3e4; border-radius: 5px;
+  max-width: calc(100% - 240px);
+  margin: 0 10px;
+  box-shadow: 0 0 10px 1px #2b6ba0;
+  border-top: 1px solid #9cc3e4;
+  border-left: 1px solid #9cc3e4;
+  border-radius: 5px;
+  padding: 15px 30px;
   background-color: #6aa0cc;
   transition: opacity 0.3s ease-in-out;
 }
@@ -23,19 +30,27 @@
   top: 110px; right: 0;
   width: calc(100% - 60px);
 }}
-
-.profile > p { /*-----------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.profile > p {
   padding: 15px 0;
-  color: black; text-align: center; line-height: 1.75; font-size: 24px; font-weight: 600;
+  text-align: center;
+  line-height: 1.75;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
 }
 .profile > p:first-child {
-  font-size: 28px; font-weight: 700;
+  font-size: 28px;
+  font-weight: 700;
 }
 .profile > p > span {
-  color: #ffd658; font-weight: 700;
+  color: #ffd658;
+  font-weight: 700;
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
 .profile > hr {
   height: 2px;
-  margin: 15px 0; border: none;
+  margin: 15px 0;
+  border: none;
   background-color: #9cc3e4;
 }

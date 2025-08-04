@@ -46,9 +46,9 @@ export default function NavBar(props) {
         <span className="logout"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</span>
         <span ref={spanRef} className="user" onClick={toggleProfile}><i className="fa fa-user"></i></span>
         <Profile
-          ref={profileRef} profileOpen={profileOpen}
-          userName={"Tibor Hajszan"} detectCount={"#110"} lastLogin={"2025.06.23"}
-        />
+          refProfile={profileRef} profileOpen={profileOpen}
+          userName={"lfdkgjőwerjőweroihjőw wpeojrg weőporgj wőőwerpogj weőpogjweprojg őwerpogj wepogjw epőwepogj"} detectCount={"#110"} lastLogin={"2025.06.23"}
+          />
       </div>
     </nav>
   );

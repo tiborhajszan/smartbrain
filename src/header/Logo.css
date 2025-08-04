@@ -1,18 +1,28 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Logo Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Logo Component Styles
+//####################################################################################################################*/
 
 .logo-tilt {
-  position: absolute; top: 90px; left: 10px;
-  width: 90px; height: 90px;
-  box-shadow: 0 5px 15px #12538a; border-radius: 10px; padding: 10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 5px 8px #12538a;
+  border-radius: 10px;
+  padding: 10px;
   background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
   transform-style: preserve-3d;
 }
-
+@media only screen and (max-width: 500px) { .logo-tilt {
+  top: 22.5px;
+  left: 15px;
+}}
+/*--------------------------------------------------------------------------------------------------------------------*/
 .logo-tilt > img {
-  width: 90px; height: 90px;
+  width: 90px;
+  height: 90px;
   filter: drop-shadow(0 0 3px #333);
   transform: translateZ(25px);
 }
