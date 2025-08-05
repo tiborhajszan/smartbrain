@@ -4,25 +4,28 @@
 //####################################################################################################################*/
 
 .logo-tilt {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 90px;
-  height: 90px;
-  box-shadow: 0 5px 8px #12538a;
+  width: 75px;
+  height: 75px;
+  box-shadow: 0 0 10px 1px #333;
   border-radius: 10px;
-  padding: 10px;
+  padding: 7.5px;
   background: linear-gradient(to right, #ff5edf 0%, #04c8de 100%);
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 500px) { .logo-tilt {
-  top: 22.5px;
-  left: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 4.5px;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
 .logo-tilt > img {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   filter: drop-shadow(0 0 3px #333);
   transform: translateZ(25px);
 }
+@media only screen and (max-width: 500px) { .logo-tilt > img {
+  width: 45px;
+  height: 45px;
+}}

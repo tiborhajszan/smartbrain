@@ -3,7 +3,7 @@
 //  Final Project | SmartBrain | Navigation Bar Component Logic
 //######################################################################################################################
 
-import { useRef, useState, useEffect } from "react";
+import {useRef, useState, useEffect} from "react";
 import Logo from "./Logo.jsx";
 import Profile from "./Profile.jsx";
 import "./NavBar.css";
@@ -14,7 +14,7 @@ export default function NavBar(props) {
 
   // ref and state -----------------------------------------------------------------------------------------------------
 
-  const spanRef = useRef(null);
+  const userRef = useRef(null);
   const profileRef = useRef(null);
   const [profileOpen, setProfileOpen] = useState(false);
 
@@ -28,7 +28,7 @@ export default function NavBar(props) {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!spanRef.current.contains(event.target)
+      if (!userRef.current.contains(event.target)
       && !profileRef.current.contains(event.target)) {
         setProfileOpen(false);
       };
@@ -42,13 +42,18 @@ export default function NavBar(props) {
   return (
     <nav ref={props.refNav}>
       <div>
+        <span>
+          <i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Logout
+        </span>
         <Logo />
-        <span className="logout"><i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Log Out</span>
-        <span ref={spanRef} className="user" onClick={toggleProfile}><i className="fa fa-user"></i></span>
+        <span ref={userRef} className="user" onClick={toggleProfile}>
+          <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
+        </span>
         <Profile
           refProfile={profileRef} profileOpen={profileOpen}
-          userName={"lfdkgjőwerjőweroihjőw wpeojrg weőporgj wőőwerpogj weőpogjweprojg őwerpogj wepogjw epőwepogj"} detectCount={"#110"} lastLogin={"2025.06.23"}
-          />
+          userName={"lfdkgjőwerjőweroihjőw wpeojrg weőporgj wőőwerpogj weőpogjweprojg őwerpogj wepogjw epőwepogj"}detectCount={"#110"}
+          lastLogin={"2025.06.23"}
+        />
       </div>
     </nav>
   );
