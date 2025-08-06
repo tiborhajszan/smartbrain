@@ -5,19 +5,27 @@
 
 .profile {
   position: absolute;
-  top: 90px;
-  right: 0;
-  min-width: 260px;
-  max-width: calc(100% - 240px);
-  margin: 0 10px;
+  top: 110px;
+  right: 10px;
+  min-width: min(calc(500px - 80px), calc(100% - 80px));
+  width: auto;
+  max-width: calc(100% - 80px);
+  max-height: calc(100vh - 110px - 40px);
   box-shadow: 0 0 10px 1px #2b6ba0;
   border-top: 1px solid #9cc3e4;
   border-left: 1px solid #9cc3e4;
-  border-radius: 5px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;  
   padding: 15px 30px;
   background-color: #6aa0cc;
   transition: opacity 0.3s ease-in-out;
 }
+@media only screen and (max-width: 500px) { .profile {
+  top: 74px;
+  max-height: calc(100vh - 74px - 40px);
+}}
 .profile.open {
   opacity: 1;
   pointer-events: auto;
@@ -26,14 +34,10 @@
   opacity: 0;
   pointer-events: none;
 }
-@media only screen and (max-width: 450px) { .profile {
-  top: 110px; right: 0;
-  width: calc(100% - 60px);
-}}
 /*--------------------------------------------------------------------------------------------------------------------*/
 .profile > p {
   padding: 15px 0;
-  text-align: center;
+  text-align: left;
   line-height: 1.75;
   color: black;
   font-size: 24px;
@@ -43,6 +47,9 @@
   font-size: 28px;
   font-weight: 700;
 }
+@media only screen and (min-width: 501px) { .profile > p > br {
+  display: none;
+}}
 .profile > p > span {
   color: #ffd658;
   font-weight: 700;

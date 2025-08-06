@@ -51,7 +51,8 @@ export default function NavBar(props) {
         </span>
         <Profile
           refProfile={profileRef} profileOpen={profileOpen}
-          userName={"lfdkgjőwerjőweroihjőw wpeojrg weőporgj wőőwerpogj weőpogjweprojg őwerpogj wepogjw epőwepogj"}detectCount={"#110"}
+          userName={"Tibor Hajszan"}
+          detectCount={"#110"}
           lastLogin={"2025.06.23"}
         />
       </div>

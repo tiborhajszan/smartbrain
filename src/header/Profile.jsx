@@ -12,9 +12,9 @@ export default function Profile(props) {
     <div ref={props.refProfile} className={`profile ${props.profileOpen ? "open" : "close"}`}>
       <p>{props.userName}</p>
       <hr />
-      <p>Detect Count:<br /><span>{props.detectCount}</span></p>
+      <p>Detect Count:&nbsp;&nbsp;<br /><span>{props.detectCount}</span></p>
       <hr />
-      <p>Last Login:<br /><span>{props.lastLogin}</span></p>
+      <p>Last Login:&nbsp;&nbsp;<br /><span>{props.lastLogin}</span></p>
     </div>
   );
 };
