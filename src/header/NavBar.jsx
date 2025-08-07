@@ -24,17 +24,17 @@ export default function NavBar(props) {
     setProfileOpen(!profileOpen);
   };
 
+  // click outside callback --------------------------------------------------------------------------------------------
+  
+  function clickOutside(event) {
+    if (!userRef.current.contains(event.target) && !profileRef.current.contains(event.target)) setProfileOpen(false);
+  };
+
   // close profile effect ----------------------------------------------------------------------------------------------
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!userRef.current.contains(event.target)
-      && !profileRef.current.contains(event.target)) {
-        setProfileOpen(false);
-      };
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {document.removeEventListener("mousedown", handleClickOutside);};
+    document.addEventListener("mousedown", clickOutside);
+    return () => document.removeEventListener("mousedown", clickOutside);
   });
 
   // rendering component -----------------------------------------------------------------------------------------------

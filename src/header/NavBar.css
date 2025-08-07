@@ -12,7 +12,6 @@ nav {
   background-color: steelblue;
   z-index: 1;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
 nav > div {
   display: flex;
   position: relative;
