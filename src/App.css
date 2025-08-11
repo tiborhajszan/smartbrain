@@ -1,9 +1,12 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Root Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Root Component Styles
+//####################################################################################################################*/
 
 #title {
+    width: 90%;
+    max-width: calc(0.9 * 1440px);
+    margin: 0 auto;
     text-align: center;
     color: #ffd658;
     font-size: 32px;

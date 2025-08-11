@@ -1,5 +1,4 @@
 //######################################################################################################################
-//  Zero To Mastery Academy
 //  Complete Web Developer in 2025: Zero to Mastery
 //  Final Project | SmartBrain | Application Webframe Logic
 //######################################################################################################################
@@ -14,7 +13,7 @@ import "./main.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <Particles bg={true} color="#eeeeee" type="cobweb" num={150} /> */}
+    <Particles bg={true} color="#eeeeee" type="cobweb" num={150} />
     <App />
   </StrictMode>
 );
