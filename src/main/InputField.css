@@ -1,11 +1,14 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Input Field Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Input Field Component Styles
+//####################################################################################################################*/
 
-.input-field { /*-----------------------------------------------------------------------------------------------------*/
-  width: calc(90% - 60px);
-  margin: 0 auto 60px; box-shadow: 0 0 10px 1px #333; border-radius: 10px; padding: 30px;
+.input-field {
+  width: calc(100% - 120px);
+  margin: 0 auto 60px;
+  box-shadow: 0 0 10px 1px #333;
+  border-radius: 10px;
+  padding: 30px;
   background:
     radial-gradient(circle at 0% 50%, #60103000 9px, #af4c60 10px, #60103000 11px) 0px 10px,
     radial-gradient(at 100% 100%, #60103000 9px, #af4c60 10px, #60103000 11px), #ffa826;
@@ -26,10 +29,16 @@
 /*--------------------------------------------------------------------------------------------------------------------*/
 .input-field > button {
   display: block;
-  min-width: 100px; width: 20%;
-  margin: 0 auto; box-shadow: 0 0 10px 1px #333, 0 0 10px 1px #9cc3e4 inset; border-radius: 10px; padding: 10px;
+  min-width: 100px;
+  width: 20%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 1px #333, 0 0 10px 1px #9cc3e4 inset;
+  border-radius: 10px;
+  padding: 10px;
   background-color: steelblue;
-  color: #fff; font-size: 20px; font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
   cursor: pointer;
 }
 .input-field > button:hover {
@@ -37,6 +46,7 @@
   color: steelblue;
 }
 .input-field > button:active {
-  box-shadow: 2px 2px 10px #333 inset, -2px -2px 10px #9cc3e4 inset; padding: 10.5px;
+  box-shadow: 2px 2px 10px #333 inset, -2px -2px 10px #9cc3e4 inset;
+  padding: 10.5px;
   font-size: 19px;
 }
