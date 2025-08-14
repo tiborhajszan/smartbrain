@@ -70,9 +70,11 @@ export default function FaceDetector(props) {
   useEffect(() => {
     if (imageUrl === aiFace) return;
     const navHeight = props.refNav.current.getBoundingClientRect().height;
+    console.log(navHeight);
     window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
     return;
-  }, [props.refNav, imageUrl]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [imageUrl]);
 
   // rendering component -----------------------------------------------------------------------------------------------
 
