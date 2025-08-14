@@ -17,9 +17,9 @@ export default function FaceDetector(props) {
 
   // ref and state -----------------------------------------------------------------------------------------------------
 
-  const [prompt, setPrompt] = useState(BASE_PROMPT);
   const inputRef = useRef(null);
   const imageRef = useRef(null);
+  const [prompt, setPrompt] = useState(BASE_PROMPT);
   const [imageUrl, setImageUrl] = useState(aiFace);
   const [faceRegions, setFaceRegions] = useState([]);
 
