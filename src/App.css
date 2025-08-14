@@ -4,8 +4,8 @@
 //####################################################################################################################*/
 
 #title {
-    width: 90%;
-    max-width: calc(0.9 * 1440px);
+    width: calc(100% - 30px);
+    max-width: calc(1440px - 30px);
     margin: 0 auto;
     text-align: center;
     color: #ffd658;
