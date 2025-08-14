@@ -5,6 +5,7 @@
 
 import {useRef} from "react";
 import NavBar from "./header/NavBar.jsx";
+import RegisterLogin from "./login/RegisterLogin.jsx";
 import FaceDetector from "./main/FaceDetector.jsx";
 import FooterBar from "./footer/FooterBar.jsx";
 import "./App.css";
@@ -22,8 +23,9 @@ export default function App() {
   return (
     <>
       <NavBar refNav={navRef} />
-      <h1 id="title">SmartBrain Face Detector</h1>
-      <FaceDetector refNav={navRef} />
+      <RegisterLogin route="Register" />
+      {/* <h1 id="title">SmartBrain Face Detector</h1> */}
+      {/* <FaceDetector refNav={navRef} /> */}
       <FooterBar />
     </>
   );
