@@ -32,7 +32,7 @@ form > input {
   display: block;
   width: calc(100% - 20px);
   margin-bottom: 30px;
-  box-shadow: 0 0 10px 1px #333;
+  box-shadow: 0 0 5px #333;
   border-radius: 10px;
   padding: 10px;
   background: none;
@@ -40,8 +40,19 @@ form > input {
   font-size: 24px;
 }
 form > input:hover {
-  background-color: #9cc3e4;
+  background-color: #ffd658;
 }
-form > input:active {
-    background-color: #9cc3e4;
+form > input:focus {
+  outline: none;
+  background-color: #ffeaa8;
+}
+form > input:invalid {
+  color: red;
+}
+form > input:last-of-type {
+  margin-bottom: 60px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+form > button {
+  min-width: 150px;
 }

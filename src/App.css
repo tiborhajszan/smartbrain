@@ -3,6 +3,29 @@
 //  Final Project | SmartBrain | Root Component Styles
 //####################################################################################################################*/
 
+button {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 5px #333, 0 0 5px #9cc3e4 inset;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: steelblue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 0 5px #333, 0 0 5px #12538a inset;
+  background-color: #eee;
+  color: steelblue;
+}
+form > button:active {
+  box-shadow: 2px 2px 5px #333 inset, -2px -2px 5px #9cc3e4 inset;
+  padding: 10.5px;
+  font-size: 19px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
 #title {
     width: calc(100% - 30px);
     max-width: calc(1440px - 30px);
