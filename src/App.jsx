@@ -3,7 +3,7 @@
 //  Final Project | SmartBrain | Root Component Logic
 //######################################################################################################################
 
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import NavBar from "./header/NavBar.jsx";
 import RegisterLogin from "./login/RegisterLogin.jsx";
 import FaceDetector from "./main/FaceDetector.jsx";
@@ -14,17 +14,24 @@ import "./App.css";
 
 export default function App() {
 
-  // ref ---------------------------------------------------------------------------------------------------------------
+  // ref and state -----------------------------------------------------------------------------------------------------
 
   const navRef = useRef(null);
+  const [route, setRoute] = useState("Login");
+
+  // click submit callback ---------------------------------------------------------------------------------------------
+
+  function clickSubmit() {
+    setRoute("Detector");
+  };
 
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
     <>
       <NavBar refNav={navRef} />
-      <RegisterLogin route="Register" />
-      {/* <h1 id="title">SmartBrain Face Detector</h1> */}
+      {route === "Register" || route === "Login" ? <RegisterLogin route={route} clickSubmit={clickSubmit} /> : null}
+      {route === "Detector" ? <h1 id="title">SmartBrain Face Detector</h1> : null}
       {/* <FaceDetector refNav={navRef} /> */}
       <FooterBar />
     </>

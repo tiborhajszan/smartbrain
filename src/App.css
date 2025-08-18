@@ -3,6 +3,16 @@
 //  Final Project | SmartBrain | Root Component Styles
 //####################################################################################################################*/
 
+#title {
+  width: calc(100% - 30px);
+  max-width: calc(1440px - 30px);
+  margin: 0 auto;
+  text-align: center;
+  color: #ffd658;
+  font-size: 32px;
+  font-weight: 900;
+  }
+/**********************************************************************************************************************/
 button {
   display: block;
   margin: 0 auto;
@@ -24,14 +34,4 @@ form > button:active {
   box-shadow: 2px 2px 5px #333 inset, -2px -2px 5px #9cc3e4 inset;
   padding: 10.5px;
   font-size: 19px;
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
-#title {
-    width: calc(100% - 30px);
-    max-width: calc(1440px - 30px);
-    margin: 0 auto;
-    text-align: center;
-    color: #ffd658;
-    font-size: 32px;
-    font-weight: 900;
 }
