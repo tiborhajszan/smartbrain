@@ -11,14 +11,14 @@ import "./FooterBar.css";
 
 // footer bar component renderer #######################################################################################
 
-export default function FooterBar() {
+export default function FooterBar(props) {
   return (
     <footer>
       <div>
         <Copyright />
         <QuickLinks />
-        <FrontEnd />
-        <BackEnd />
+        {props.route === "detector" ? <FrontEnd /> : null}
+        {props.route === "detector" ? <BackEnd /> : null}
       </div>
     </footer>
   );

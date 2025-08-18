@@ -1,36 +1,28 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Footer Bar Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Footer Bar Component Styles
+//####################################################################################################################*/
 
-footer { /*-----------------------------------------------------------------------------------------------------------*/
-  box-shadow: 0 -5px 8px #333;
+footer {
+  box-shadow: 0 -5px 10px #333;
   background-color: #333;
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
 footer > div {
+  display: flex;
   width: calc(100% - 60px);
   max-width: calc(1440px - 60px);
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 auto;
   padding: 30px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
 }
-/* @media only screen and (max-width: 1140px) { footer > div {
-  max-width: 700px;
-}} */
-/* @media only screen and (max-width: 500px) { footer > div {
-  flex-direction: column;
-  align-items: center;
-}} */
-
-.footer-item { /*-----------------------------------------------------------------------------------------------------*/
+/**********************************************************************************************************************/
+/* .footer-item {
   height: 300px;
-  border-right: 1px solid #eee;
-  padding-right: 30px;
-}
+} */
 
 .footer-item > h2 { /*------------------------------------------------------------------------------------------------*/
   margin-bottom: 25px;
@@ -52,15 +44,16 @@ footer > div {
 /* @media only screen and (max-width: 500px) { .links p, .links li {
   text-align: center;
 }} */
-.footer-item a {
+/*--------------------------------------------------------------------------------------------------------------------*/
+.footer-item > a {
   color: #eee;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
-.footer-item a:hover {
+.footer-item > a:hover {
   color: #6aa0cc;
 }
-.footer-item a:active {
+.footer-item > a:active {
   color: #ff8a58;
 }
