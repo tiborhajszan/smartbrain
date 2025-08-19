@@ -14,46 +14,48 @@ footer > div {
   max-width: calc(1440px - 60px);
   margin: 0 auto;
   padding: 30px;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
 }
+@media only screen and (max-width: 668px) { footer > div {
+  flex-direction: column;
+  align-items: center;
+}}
 /**********************************************************************************************************************/
-/* .footer-item {
-  height: 300px;
-} */
-
-.footer-item > h2 { /*------------------------------------------------------------------------------------------------*/
+.footer-item > h2 {
   margin-bottom: 25px;
   color: #ffd658;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.footer-item > ul { /*------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 668px) { .footer-item > h2 {
+  text-align: center;
+}}
+/*--------------------------------------------------------------------------------------------------------------------*/
+.footer-item > ul {
   list-style: none;
 }
 .footer-item > ul > li {
   margin-bottom: 3px;
 }
+@media only screen and (max-width: 668px) { .footer-item > ul > li {
+  text-align: center;
+}}
 .footer-item > ul > li:last-child {
   margin-bottom: 25px;
 }
-/* @media only screen and (max-width: 500px) { .links p, .links li {
-  text-align: center;
-}} */
 /*--------------------------------------------------------------------------------------------------------------------*/
-.footer-item > a {
+.footer-item a {
   color: #eee;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
-.footer-item > a:hover {
+.footer-item a:hover {
   color: #6aa0cc;
 }
-.footer-item > a:active {
+.footer-item a:active {
   color: #ff8a58;
 }

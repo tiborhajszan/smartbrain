@@ -5,7 +5,7 @@
 
 import "./QuickLinks.css";
 
-// links component renderer ############################################################################################
+// quick links component renderer ######################################################################################
 
 export default function QuickLinks() {
 
@@ -21,9 +21,9 @@ export default function QuickLinks() {
   // icons array -------------------------------------------------------------------------------------------------------
 
   const iconsArray = [
-    {key: "i1", href: "https://www.linkedin.com/in/tibor-hajszan", class: "fa fa-linkedin"},
-    {key: "i2", href: "https://github.com/tiborhajszan", class: "fa fa-github"},
-    {key: "i3", href: "#", class: "fa fa-briefcase"}
+    {key: "i1", href: "https://github.com/tiborhajszan", class: "fa fa-github"},
+    {key: "i2", href: "#", class: "fa fa-briefcase"},
+    {key: "i3", href: "https://www.linkedin.com/in/tibor-hajszan", class: "fa fa-linkedin"}
   ];
 
   // rendering component -----------------------------------------------------------------------------------------------
