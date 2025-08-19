@@ -42,13 +42,22 @@ export default function NavBar(props) {
   return (
     <nav ref={props.refNav}>
       <div>
-        <span>
-          <i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Logout
-        </span>
+        {props.route === "Login"
+        ? <span>SmartBrain</span>
+        : <span onClick={() => props.setRoute("Login")}>
+            <i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Logout
+          </span>}
         <Logo />
-        <span ref={userRef} className="user" onClick={toggleProfile}>
-          <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
-        </span>
+        {props.route === "Login"
+        ? <span onClick={() => props.setRoute("Register")}>
+            <i className="fa fa-edit"></i>&nbsp;&nbsp;Register
+          </span>
+        : null}
+        {props.route === "Detector"
+        ? <span ref={userRef} className="user" onClick={toggleProfile}>
+            <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
+          </span>
+        : null}
         <Profile
           refProfile={profileRef} profileOpen={profileOpen}
           userName={"Tibor Hajszan"}

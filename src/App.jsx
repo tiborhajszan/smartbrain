@@ -29,10 +29,10 @@ export default function App() {
 
   return (
     <>
-      <NavBar refNav={navRef} />
-      {route === "Register" || route === "Login" ? <RegisterLogin route={route} clickSubmit={clickSubmit} /> : null}
+      <NavBar refNav={navRef} route={route} setRoute={setRoute} />
+      {route === "Register" || route === "Login" ? <RegisterLogin route={route} /> : null}
       {route === "Detector" ? <h1 id="title">SmartBrain Face Detector</h1> : null}
-      {/* <FaceDetector refNav={navRef} /> */}
+      {route === "Detector" ? <FaceDetector refNav={navRef} /> : null}
       <FooterBar />
     </>
   );
