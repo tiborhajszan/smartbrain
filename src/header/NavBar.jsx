@@ -22,17 +22,20 @@ export default function NavBar(props) {
 
   function toggleProfile() {
     setProfileOpen(!profileOpen);
+    return;
   };
 
   // click outside callback --------------------------------------------------------------------------------------------
   
   function clickOutside(event) {
     if (!userRef.current.contains(event.target) && !profileRef.current.contains(event.target)) setProfileOpen(false);
+    return;
   };
 
   // close profile effect ----------------------------------------------------------------------------------------------
 
   useEffect(() => {
+    if (props.route !== "Detector") return;
     document.addEventListener("mousedown", clickOutside);
     return () => document.removeEventListener("mousedown", clickOutside);
   });
@@ -53,17 +56,24 @@ export default function NavBar(props) {
             <i className="fa fa-edit"></i>&nbsp;&nbsp;Register
           </span>
         : null}
+        {props.route === "Register"
+        ? <span onClick={() => props.setRoute("Login")}>
+            <i className="fa fa-sign-in"></i>&nbsp;&nbsp;Login
+          </span>
+        : null}
         {props.route === "Detector"
         ? <span ref={userRef} className="user" onClick={toggleProfile}>
             <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
           </span>
         : null}
-        <Profile
-          refProfile={profileRef} profileOpen={profileOpen}
-          userName={"Tibor Hajszan"}
-          detectCount={"#110"}
-          lastLogin={"2025.06.23"}
-        />
+        {props.route === "Detector"
+        ? <Profile
+            refProfile={profileRef} profileOpen={profileOpen}
+            userName={"Tibor Hajszan"}
+            detectCount={"#110"}
+            lastLogin={"2025.06.23"}
+          />
+        : null}
       </div>
     </nav>
   );
