@@ -14,11 +14,12 @@ footer > div {
   max-width: calc(1440px - 60px);
   margin: 0 auto;
   padding: 30px;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
 }
-@media only screen and (max-width: 668px) { footer > div {
+@media only screen and (max-width: 690px) { footer > div {
   flex-direction: column;
   align-items: center;
 }}
@@ -30,7 +31,7 @@ footer > div {
   font-weight: 700;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 668px) { .footer-item > h2 {
+@media only screen and (max-width: 690px) { .footer-item > h2 {
   text-align: center;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -40,7 +41,7 @@ footer > div {
 .footer-item > ul > li {
   margin-bottom: 3px;
 }
-@media only screen and (max-width: 668px) { .footer-item > ul > li {
+@media only screen and (max-width: 690px) { .footer-item > ul > li {
   text-align: center;
 }}
 .footer-item > ul > li:last-child {

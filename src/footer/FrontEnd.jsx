@@ -27,8 +27,8 @@ export default function FrontEnd() {
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
-    <div className="front-end">
-      <p>Frontend&nbsp;&nbsp;Stack</p>
+    <div className="footer-item front-end">
+      <h2>Frontend&nbsp;&nbsp;Stack</h2>
       <ul>{frontendArray.map(tool => {
         return <li key={tool.key}><a href={tool.href} target="_blank">{tool.text}</a></li>;
       })}</ul>

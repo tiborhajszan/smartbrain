@@ -3,57 +3,21 @@
 ##  Final Project | SmartBrain | Front End Component Styles
 ######################################################################################################################*/
 
-.front-end { /*-------------------------------------------------------------------------------------------------------*/
-  height: 300px;
-  border-right: 1px solid #eee;
-  padding-right: 30px;
-}
-
-.front-end > p { /*---------------------------------------------------------------------------------------------------*/
-  margin-bottom: 25px;
-  color: #ffd658;
-  font-size: 16px;font-weight: 700;
-  text-transform: uppercase;
-}
-
-.front-end > ul { /*--------------------------------------------------------------------------------------------------*/
-  list-style: none;
-}
-.front-end > ul > li {
-  margin-bottom: 3px;
-}
-.front-end > ul > li:last-child {
-  margin-bottom: 25px;
-}
-/* @media only screen and (max-width: 500px) { .tools p, .tools li {
-  text-align: center;
-}} */
-.front-end > ul a {
-  color: #eee;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-}
-.front-end > ul a:hover {
-  color: #6aa0cc;
-}
-.front-end > ul a:active {
-  color: #ff8a58;
-}
-
-.front-end > div { /*-------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 860px) { .front-end {
+  display: none;
+}}
+/*--------------------------------------------------------------------------------------------------------------------*/
+.front-end > div {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
-/* @media only screen and (max-width: 500px) { .tools div {
-  justify-content: center;
-}} */
-.front-end > div img {
+/*--------------------------------------------------------------------------------------------------------------------*/
+.front-end > div > a > img {
   width: 50px;
   height: 50px;
 }
-.front-end > div img:hover {
+.front-end > div > a > img:hover {
   filter: drop-shadow(0 0 10px steelblue);
 }
 @keyframes logo-spin {
