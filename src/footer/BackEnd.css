@@ -1,60 +1,12 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Back End Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Back End Component Styles
+//####################################################################################################################*/
 
-.back-end { /*--------------------------------------------------------------------------------------------------------*/
-  width: 200px;
-}
-
-.back-end > p { /*----------------------------------------------------------------------------------------------------*/
-  margin-bottom: 25px;
-  color: #ffd658;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.back-end > ul { /*---------------------------------------------------------------------------------------------------*/
-  list-style: none;
-}
-.back-end > ul > li {
-  margin-bottom: 3px;
-}
-.back-end > ul > li:last-child {
-  margin-bottom: 25px;
-}
-/* @media only screen and (max-width: 500px) { .tools p, .tools li {
-  text-align: center;
-}} */
-.back-end > ul a {
-  color: #eee;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-}
-.back-end > ul a:hover {
-  color: #6aa0cc;
-}
-.back-end > ul a:active {
-  color: #ff8a58;
-}
-
-.back-end > div { /*--------------------------------------------------------------------------------------------------*/
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-/* @media only screen and (max-width: 500px) { .tools div {
-  justify-content: center;
-}} */
-.back-end > div img {
-  width: 50px;
-  height: 50px;
-}
-.back-end > div img:hover {
-  filter: drop-shadow(0 0 10px steelblue);
-}
+@media only screen and (max-width: 1060px) { .back-end {
+  display: none;
+}}
+/*--------------------------------------------------------------------------------------------------------------------*/
 .back-end > div > a:last-child > img {
   width: 53px;
   height: 53px;

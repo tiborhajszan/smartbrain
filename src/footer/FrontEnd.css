@@ -1,25 +1,12 @@
 /*######################################################################################################################
-##  Complete Web Developer in 2025: Zero to Mastery
-##  Final Project | SmartBrain | Front End Component Styles
-######################################################################################################################*/
+//  Complete Web Developer in 2025: Zero to Mastery
+//  Final Project | SmartBrain | Front End Component Styles
+//####################################################################################################################*/
 
-@media only screen and (max-width: 860px) { .front-end {
+@media only screen and (max-width: 1060px) { .front-end {
   display: none;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
-.front-end > div {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
-.front-end > div > a > img {
-  width: 50px;
-  height: 50px;
-}
-.front-end > div > a > img:hover {
-  filter: drop-shadow(0 0 10px steelblue);
-}
 @keyframes logo-spin {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}

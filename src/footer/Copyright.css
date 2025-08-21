@@ -4,15 +4,9 @@
 //####################################################################################################################*/
 
 .copyright {
-  border-right: 1px solid #eee;
-  padding: 28px 30px 28px 0;
-  align-self: center;
+  padding-right: 30px;
 }
-@media only screen and (min-width: 861px) { .copyright {
-  padding: 69px 30px 69px 0;
-}}
 @media only screen and (max-width: 690px) { .copyright {
-  border-right: none;
   padding: 0;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
