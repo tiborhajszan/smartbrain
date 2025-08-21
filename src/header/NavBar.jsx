@@ -45,7 +45,7 @@ export default function NavBar(props) {
   return (
     <nav ref={props.refNav}>
       <div>
-        {props.route === "Login"
+        {props.route === "Login" || props.route === "Register"
         ? <span>SmartBrain</span>
         : <span onClick={() => props.setRoute("Login")}>
             <i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Logout
@@ -62,7 +62,7 @@ export default function NavBar(props) {
           </span>
         : null}
         {props.route === "Detector"
-        ? <span ref={userRef} className="user" onClick={toggleProfile}>
+        ? <span ref={userRef} onClick={toggleProfile}>
             <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
           </span>
         : null}

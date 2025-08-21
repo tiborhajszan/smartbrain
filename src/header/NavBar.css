@@ -12,15 +12,18 @@ nav {
   background-color: steelblue;
   z-index: 1;
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
 nav > div {
-  display: flex;
+  display: grid;
   position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 10px 0;
-  justify-content: space-evenly;
+  grid-template-columns: 2fr 1fr 2fr;
+  justify-items: center;
   align-items: center;
+  gap: 15px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
 nav > div > span {
@@ -38,9 +41,3 @@ nav > div > span:hover {
 nav > div > span:active {
   color: #ff8a58;
 }
-nav > div > span.user {
-  margin-right: 10px;
-}
-@media only screen and (max-width: 500px) { nav > div > span.user {
-  margin-right: 8px;
-}}
