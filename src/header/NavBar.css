@@ -16,14 +16,14 @@ nav {
 nav > div {
   display: grid;
   position: relative;
-  width: 100%;
-  max-width: 1440px;
+  width: calc(100% - 20px);
+  max-width: calc(1440px - 20px);
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 10px;
   grid-template-columns: 2fr 1fr 2fr;
   justify-items: center;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
 nav > div > span {
