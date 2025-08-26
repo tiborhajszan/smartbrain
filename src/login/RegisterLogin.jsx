@@ -9,15 +9,15 @@ import "./RegisterLogin.css";
 
 export default function RegisterLogin(props) {
   return (
-    <form action="">
+    <div className="register-login">
       <legend>{props.route}</legend>
-      {props.route === "Register" ? <label htmlFor="username">Name:</label> : null}
-      {props.route === "Register" ? <input type="text" name="username" required /> : null}
-      <label htmlFor="email">Email:</label>
-      <input type="email" name="email" required />
-      <label htmlFor="password">Password:</label>
-      <input type="password" name="password" required />
-      <button type="submit" onClick={props.clickSubmit}>{props.route}</button>
-    </form>
+      {props.route === "Register" ? <p>Name:</p> : null}
+      {props.route === "Register" ? <input type="text" /> : null}
+      <p>Email:</p>
+      <input type="email" />
+      <p>Password:</p>
+      <input type="password" />
+      <button onClick={() => props.setRoute("Detector")}>{props.route}</button>
+    </div>
   );
 };

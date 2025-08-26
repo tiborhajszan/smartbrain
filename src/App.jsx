@@ -19,18 +19,12 @@ export default function App() {
   const navRef = useRef(null);
   const [route, setRoute] = useState("Login");
 
-  // click submit callback ---------------------------------------------------------------------------------------------
-
-  function clickSubmit() {
-    setRoute("Detector");
-  };
-
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
     <>
       <NavBar refNav={navRef} route={route} setRoute={setRoute} />
-      {route === "Register" || route === "Login" ? <RegisterLogin route={route} clickSubmit={clickSubmit} /> : null}
+      {route === "Register" || route === "Login" ? <RegisterLogin route={route} setRoute={setRoute} /> : null}
       {route === "Detector" ? <h1 id="title">SmartBrain Face Detector</h1> : null}
       {route === "Detector" ? <FaceDetector refNav={navRef} /> : null}
       <FooterBar route={route} />

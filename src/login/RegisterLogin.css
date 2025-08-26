@@ -3,7 +3,7 @@
 //  Final Project | SmartBrain | Register/Login Component Styles
 //####################################################################################################################*/
 
-form {
+.register-login {
   min-width: 230px;
   width: calc(100% - 90px);
   max-width: 500px;
@@ -13,22 +13,21 @@ form {
   padding: 30px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-form > legend {
+.register-login > legend {
   margin-bottom: 30px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-form > label {
-  display: block;
+.register-login > p {
   margin-bottom: 10px;
   color: #333;
   font-size: 24px;
   font-weight: 700;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-form > input {
+.register-login > input {
   display: block;
   width: calc(100% - 20px);
   margin-bottom: 30px;
@@ -39,20 +38,17 @@ form > input {
   color: #333;
   font-size: 24px;
 }
-form > input:hover {
+.register-login > input:hover {
   background-color: #ffd658;
 }
-form > input:focus {
+.register-login > input:focus {
   outline: none;
   background-color: #ffeaa8;
 }
-form > input:invalid {
-  color: red;
-}
-form > input:last-of-type {
+.register-login > input:last-of-type {
   margin-bottom: 60px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-form > button {
+.register-login > button {
   min-width: 150px;
 }
