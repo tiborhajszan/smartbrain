@@ -3,11 +3,11 @@
 //  Final Project | SmartBrain | Back End Component Styles
 //####################################################################################################################*/
 
-@media only screen and (max-width: 1060px) { .back-end {
+@media only screen and (max-width: 1115px) { #back-end {
   display: none;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
-.back-end > div > a:last-child > img {
+#back-end > div > a:last-child > img {
   width: 53px;
   height: 53px;
 }

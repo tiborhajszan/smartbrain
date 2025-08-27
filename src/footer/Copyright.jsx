@@ -10,7 +10,7 @@ import "./Copyright.css";
 
 export default function Copyright() {
   return (
-    <div className="footer-item copyright">
+    <div id="copyright" className="footer-item">
       <img src={logoTH} alt="Tibor Hajszan Logo" />
       <a href="https://www.linkedin.com/in/tibor-hajszan/" target="_blank">
         &copy; 2025 Tibor Hajszan

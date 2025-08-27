@@ -10,7 +10,7 @@ import "./BackEnd.css";
 
 // back end component renderer #########################################################################################
 
-export default function BackEnd() {
+export default function BackEnd(props) {
 
   // links array -------------------------------------------------------------------------------------------------------
 
@@ -31,8 +31,8 @@ export default function BackEnd() {
 
   // rendering component -----------------------------------------------------------------------------------------------
 
-  return (
-    <div className="footer-item back-end">
+  if (props.route === "Detector") return (
+    <div id="back-end" className="footer-item">
       <h2>Backend&nbsp;&nbsp;Stack</h2>
       <ul>{linksArray.map(link => {
         return <li key={link.key}><a href={link.href} target="_blank">{link.text}</a></li>;
@@ -42,4 +42,9 @@ export default function BackEnd() {
       })}</div>
     </div>
   );
+
+  // hiding component --------------------------------------------------------------------------------------------------
+
+  return null;
+
 };

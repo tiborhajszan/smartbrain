@@ -3,30 +3,33 @@
 //  Final Project | SmartBrain | Copyright Component Styles
 //####################################################################################################################*/
 
-.copyright {
-  padding-right: 30px;
+#copyright {
+  width: auto;
+  height: auto;
+  border: none;
+  padding: 0 15px 0 0;
 }
-@media only screen and (max-width: 690px) { .copyright {
+@media only screen and (max-width: 690px) { #copyright {
   padding: 0;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
-.copyright > img {
+#copyright > img {
   display: block;
   width: 50px;
   height: 50px;
   margin: 0 auto 15px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-.copyright > a {
+#copyright > a {
   display: block;
   margin-bottom: 25px;
   text-align: center;
 }
-.copyright > a:last-child {
+#copyright > a:last-child {
   margin-bottom: 0;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
-.copyright > p {
+#copyright > p {
   margin-bottom: 10px;
   color: #ffd658;
   font-size: 16px;

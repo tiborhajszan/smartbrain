@@ -14,16 +14,23 @@ footer > div {
   max-width: calc(1440px - 60px);
   margin: 0 auto;
   padding: 30px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 15px;
 }
 @media only screen and (max-width: 690px) { footer > div {
   flex-direction: column;
   align-items: center;
 }}
 /**********************************************************************************************************************/
+.footer-item {
+  width: 188px;
+  height: 300px;
+  border-left: 1px solid #eee;
+  padding-left: 15px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
 .footer-item > h2 {
   margin-bottom: 25px;
   color: #ffd658;
@@ -31,9 +38,9 @@ footer > div {
   font-weight: 700;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 690px) { .footer-item > h2 {
+/* @media only screen and (max-width: 690px) { .footer-item > h2 {
   text-align: center;
-}}
+}} */
 /*--------------------------------------------------------------------------------------------------------------------*/
 .footer-item > ul {
   list-style: none;
@@ -41,9 +48,9 @@ footer > div {
 .footer-item > ul > li {
   margin-bottom: 3px;
 }
-@media only screen and (max-width: 690px) { .footer-item > ul > li {
+/* @media only screen and (max-width: 690px) { .footer-item > ul > li {
   text-align: center;
-}}
+}} */
 .footer-item > ul > li:last-child {
   margin-bottom: 25px;
 }
