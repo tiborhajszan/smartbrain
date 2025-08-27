@@ -9,7 +9,7 @@ import "./FrontEnd.css";
 
 // front end component renderer ########################################################################################
 
-export default function FrontEnd() {
+export default function FrontEnd(props) {
 
   // links array -------------------------------------------------------------------------------------------------------
 
@@ -33,8 +33,8 @@ export default function FrontEnd() {
 
   // rendering component -----------------------------------------------------------------------------------------------
 
-  return (
-    <div className="footer-item front-end">
+  if (props.route === "Detector") return (
+    <div id="front-end" className="footer-item">
       <h2>Frontend&nbsp;&nbsp;Stack</h2>
       <ul>{linksArray.map(link => {
         return <li key={link.key}><a href={link.href} target="_blank">{link.text}</a></li>;
@@ -44,4 +44,9 @@ export default function FrontEnd() {
       })}</div>
     </div>
   );
+
+  // hiding component --------------------------------------------------------------------------------------------------
+
+  return null;
+  
 };

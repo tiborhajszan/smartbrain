@@ -17,7 +17,7 @@ export default function FooterBar(props) {
       <div>
         <Copyright />
         <QuickLinks />
-        {props.route === "Detector" ? <FrontEnd /> : null}
+        <FrontEnd route={props.route} />
         <BackEnd route={props.route} />
       </div>
     </footer>

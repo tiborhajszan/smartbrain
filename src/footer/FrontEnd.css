@@ -3,7 +3,7 @@
 //  Final Project | SmartBrain | Front End Component Styles
 //####################################################################################################################*/
 
-@media only screen and (max-width: 1115px) { .front-end {
+@media only screen and (max-width: 1115px) { #front-end {
   display: none;
 }}
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -11,6 +11,6 @@
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
-.front-end > div > a:last-child > img {
+#front-end > div > a:last-child > img {
   animation: logo-spin 20s linear infinite;
 }
