@@ -11,7 +11,7 @@ export default function OutputField(props) {
 
   // calculating face bounding boxes -----------------------------------------------------------------------------------
 
-  const faceBoxes = props.faceRegions.map(region => {return {
+  const faceBoxes = props.faceRegions.map(region => { return {
     top: (100 * region.region_info.bounding_box.top_row).toFixed(2) + "%",
     left: (100 * region.region_info.bounding_box.left_col).toFixed(2) + "%",
     right: (100 * (1 - region.region_info.bounding_box.right_col)).toFixed(2) + "%",
@@ -23,7 +23,7 @@ export default function OutputField(props) {
   return (
     <div className="output-field"><div ref={props.refImage} className="image-box">
       <img src={props.imageUrl} alt="Analyzed Image" />
-      {faceBoxes.map((box, index) => {return (<div
+      {faceBoxes.map((box, index) => { return (<div
         key={index} className="face-box"
         style={{top: box.top, left: box.left, right: box.right, bottom: box.bottom}}
       />);})}
