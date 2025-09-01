@@ -9,7 +9,7 @@ import aiFace from "/src/assets/ai-face.jpg";
 import ClarifaiClient from "./ClarifaiClient.js";
 import OutputField from "./OutputField.jsx";
 import "./FaceDetector.css";
-const BASE_PROMPT = "Enter an image URL and click \"Detect\". SmartBrain will find and mark human faces in your image.";
+const BASE_PROMPT = "Enter an image URL and click \"Detect\". SmartBrain finds and marks human faces in your image.";
 
 // face detector component renderer ####################################################################################
 
@@ -70,8 +70,7 @@ export default function FaceDetector(props) {
   useEffect(() => {
     if (imageUrl === aiFace) return;
     const navHeight = props.refNav.current.getBoundingClientRect().height;
-    console.log(navHeight);
-    window.scrollTo({top: imageRef.current.offsetTop - navHeight - 60, behavior: "smooth"});
+    window.scrollTo({top: imageRef.current.offsetTop - 60 - navHeight, behavior: "smooth"});
     return;
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [imageUrl]);
