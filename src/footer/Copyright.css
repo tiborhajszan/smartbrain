@@ -4,10 +4,13 @@
 //####################################################################################################################*/
 
 #copyright {
+  display: flex;
   width: auto;
   height: auto;
   border: none;
   padding: 0 15px 0 0;
+  flex-direction: column;
+  align-self: center;
 }
 @media only screen and (max-width: 690px) { #copyright {
   padding: 0;
@@ -25,9 +28,9 @@
   margin-bottom: 25px;
   text-align: center;
 }
-#copyright > a:last-child {
+@media only screen and (max-width: 690px) { #copyright > a:last-child {
   margin-bottom: 0;
-}
+}}
 /*--------------------------------------------------------------------------------------------------------------------*/
 #copyright > p {
   margin-bottom: 10px;

@@ -22,6 +22,7 @@ footer > div {
 @media only screen and (max-width: 690px) { footer > div {
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 }}
 /**********************************************************************************************************************/
 .footer-item {
@@ -30,6 +31,10 @@ footer > div {
   border-left: 1px solid #eee;
   padding-left: 15px;
 }
+@media only screen and (max-width: 690px) { .footer-item {
+  border: none;
+  padding: 0;
+}}
 /*--------------------------------------------------------------------------------------------------------------------*/
 .footer-item > h2 {
   margin-bottom: 25px;
@@ -38,9 +43,9 @@ footer > div {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* @media only screen and (max-width: 690px) { .footer-item > h2 {
+@media only screen and (max-width: 690px) { .footer-item > h2 {
   text-align: center;
-}} */
+}}
 /*--------------------------------------------------------------------------------------------------------------------*/
 .footer-item > ul {
   list-style: none;
@@ -48,9 +53,9 @@ footer > div {
 .footer-item > ul > li {
   margin-bottom: 3px;
 }
-/* @media only screen and (max-width: 690px) { .footer-item > ul > li {
+@media only screen and (max-width: 690px) { .footer-item > ul > li {
   text-align: center;
-}} */
+}}
 .footer-item > ul > li:last-child {
   margin-bottom: 25px;
 }

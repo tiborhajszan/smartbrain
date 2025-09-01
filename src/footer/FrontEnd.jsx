@@ -48,5 +48,4 @@ export default function FrontEnd(props) {
   // hiding component --------------------------------------------------------------------------------------------------
 
   return null;
-  
 };

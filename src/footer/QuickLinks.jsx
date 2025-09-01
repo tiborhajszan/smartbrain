@@ -7,7 +7,7 @@ import "./QuickLinks.css";
 
 // quick links component renderer ######################################################################################
 
-export default function QuickLinks() {
+export default function QuickLinks(props) {
 
   // links array -------------------------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ export default function QuickLinks() {
   // rendering component -----------------------------------------------------------------------------------------------
 
   return (
-    <div className="footer-item quick-links">
+    <div id={props.route === "Detector" ? "links-detector" : "links-login"} className="footer-item">
       <h2>Quick&nbsp;&nbsp;Links</h2>
       <ul>{linksArray.map(link => {
         return <li key={link.key}><a href={link.href} target="_blank">{link.text}</a></li>;
