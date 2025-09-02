@@ -3,7 +3,7 @@
 //  Final Project | SmartBrain | Root Component Logic
 //######################################################################################################################
 
-import {useRef, useState} from "react";
+import {useRef, useState, useEffect} from "react";
 import NavBar from "./header/NavBar.jsx";
 import RegisterLogin from "./login/RegisterLogin.jsx";
 import FaceDetector from "./main/FaceDetector.jsx";
@@ -19,14 +19,29 @@ export default function App() {
   const navRef = useRef(null);
   const [route, setRoute] = useState("Login");
 
-  // rendering component -----------------------------------------------------------------------------------------------
+  // scroll to page top effect -----------------------------------------------------------------------------------------
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "instant"});
+  }, [route]);
+
+  // rendering detector page -------------------------------------------------------------------------------------------
+
+  if (route === "Detector") return (
+    <>
+      <NavBar refNav={navRef} route={route} setRoute={setRoute} />
+      <h1 id="title">SmartBrain Face Detector</h1>
+      <FaceDetector refNav={navRef} />
+      <FooterBar route={route} />
+    </>
+  );
+
+  // rendering register/login page -------------------------------------------------------------------------------------
 
   return (
     <>
       <NavBar refNav={navRef} route={route} setRoute={setRoute} />
-      {route === "Register" || route === "Login" ? <RegisterLogin route={route} setRoute={setRoute} /> : null}
-      {route === "Detector" ? <h1 id="title">SmartBrain Face Detector</h1> : null}
-      {route === "Detector" ? <FaceDetector refNav={navRef} /> : null}
+      <RegisterLogin route={route} setRoute={setRoute} />
       <FooterBar route={route} />
     </>
   );
