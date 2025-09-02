@@ -4,12 +4,10 @@
 //####################################################################################################################*/
 
 #copyright {
-  display: flex;
   width: auto;
   height: auto;
   border: none;
   padding: 0 15px 0 0;
-  flex-direction: column;
   align-self: center;
 }
 @media only screen and (max-width: 690px) { #copyright {
