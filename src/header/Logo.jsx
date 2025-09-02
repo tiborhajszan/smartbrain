@@ -11,7 +11,9 @@ import "./Logo.css";
 
 export default function Logo() {
   return (
-    <Tilt className="logo-tilt" tiltMaxAngleX={30} tiltMaxAngleY={30} perspective={500} tiltReverse={true}>
+    <Tilt
+      className="logo-tilt" tiltMaxAngleX={30} tiltMaxAngleY={30}
+      perspective={500} tiltReverse={true} trackOnWindow={true}>
       <img src={imgLogo} alt="brain" />
     </Tilt>
   );
