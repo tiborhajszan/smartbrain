@@ -3,8 +3,10 @@
 //  Final Project | SmartBrain | Quick Links Component Styles
 //####################################################################################################################*/
 
-#links-login > ul > li:nth-child(3),
-#links-detector > ul > li:nth-child(3) {
+#links-login > ul > li:nth-child(2),
+#links-login > ul > li:nth-child(4),
+#links-detector > ul > li:nth-child(2),
+#links-detector > ul > li:nth-child(4) {
   margin-bottom: 25px;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/

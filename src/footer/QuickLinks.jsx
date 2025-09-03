@@ -14,8 +14,9 @@ export default function QuickLinks(props) {
   const linksArray = [
     {key: "ql1", href: "https://github.com/tiborhajszan/smartbrain", text: "SmartBrain Frontend Repo"},
     {key: "ql2", href: "https://github.com/tiborhajszan/smartbrain-api", text: "SmartBrain Backend Repo"},
-    {key: "ql3", href: "#", text: "SmartBrain By ZtM"},
-    {key: "ql4", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "Course Notes & Projects"}
+    {key: "ql3", href: "https://github.com/aneagoie/face-recognition-brain", text: "SB Frontend By ZtM"},
+    {key: "ql4", href: "https://github.com/aneagoie/face-recognition-brain-api", text: "SB Backend By ZtM"},
+    {key: "ql5", href: "https://tiborhajszan.github.io/ZtmCourse_WebDeveloper", text: "Course Notes & Projects"}
   ];
 
   // icons array -------------------------------------------------------------------------------------------------------
