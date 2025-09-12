@@ -37,11 +37,17 @@ export default function RegisterLogin(props) {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(payLoad)
     })
-    .then(response => {
-      console.log(response.text());
+    .then(fetchResponse => {
+      if (fetchResponse.status === 200) {
+        fetchResponse.json()
+        .then(user => console.log(user));
+      } else {
+        fetchResponse.text()
+        .then(error => console.log(error));
+      };
     })
     .catch(error => {
-      console.log("Catch: ", error);
+      console.log(error.message);
     });
 
     return;
