@@ -18,12 +18,15 @@ export default function App() {
 
   const navRef = useRef(null);
   const [route, setRoute] = useState("Login");
+  const [user, setUser] = useState({});
+  const [lastLogin, setLastLogin] = useState(null);
 
   // scroll to page top effect -----------------------------------------------------------------------------------------
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "instant"});
-  }, [route]);
+    alert(lastLogin);
+  }, [route, lastLogin]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
 
@@ -41,7 +44,7 @@ export default function App() {
   return (
     <>
       <NavBar refNav={navRef} route={route} setRoute={setRoute} />
-      <RegisterLogin route={route} setRoute={setRoute} />
+      <RegisterLogin route={route} setRoute={setRoute} setUser={setUser} setLastLogin={setLastLogin} />
       <FooterBar route={route} />
     </>
   );

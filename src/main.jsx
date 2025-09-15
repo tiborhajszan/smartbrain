@@ -13,7 +13,7 @@ import "./main.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Particles bg={true} color="#eeeeee" type="cobweb" num={150} />
+    {/* <Particles bg={true} color="#eeeeee" type="cobweb" num={150} /> */}
     <App />
   </StrictMode>
 );
