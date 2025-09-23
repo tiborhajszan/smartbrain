@@ -3,30 +3,29 @@
 //  Final Project | SmartBrain | Register/Login Component Logic
 //######################################################################################################################
 
-import {useRef, useState} from "react";
+import {useRef} from "react";
 import "./RegisterLogin.css";
 
 // register/login component renderer ###################################################################################
 
 export default function RegisterLogin(props) {
 
-  // ref ---------------------------------------------------------------------------------------------------------------
+  // ref and state -----------------------------------------------------------------------------------------------------
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [legend, setLegend] = useState(props.route);
 
   // press enter callback ----------------------------------------------------------------------------------------------
 
   function pressEnter(event) {
-    if (event.keyCode === 13) clickLogin();
+    if (event.keyCode === 13) clickRegisterLogin();
     return;
   }
 
-  // click login callback ----------------------------------------------------------------------------------------------
+  // click register/login callback -------------------------------------------------------------------------------------
 
-  function clickLogin() {
+  function clickRegisterLogin() {
 
     // setting /login request ..........................................................................................
     let fetchUrl = "http://localhost:3000/login";
@@ -50,19 +49,19 @@ export default function RegisterLogin(props) {
     .then(fetchResponse => fetchResponse.json())
     .then(responseObj => {
       if (responseObj.status) {
+        props.setRoute("Detector");
         props.setUser(responseObj.user);
         props.setLastLogin(new Date());
-        props.setRoute("Detector");
       } else {
         props.setUser({});
         props.setLastLogin(null);
-        setLegend(responseObj.message);
+        alert(responseObj.message);
       };
     })
     .catch(() => {
       props.setUser({});
       props.setLastLogin(null);
-      setLegend("API Error");
+      alert("API error : Try again later.");
     });
 
     // returning .......................................................................................................
@@ -73,14 +72,14 @@ export default function RegisterLogin(props) {
 
   return (
     <div className="register-login">
-      <legend>{legend}</legend>
+      <legend>{props.route}</legend>
       {props.route === "Register" ? <p>Name:</p> : null}
       {props.route === "Register" ? <input ref={nameRef} type="text" onKeyDown={pressEnter} /> : null}
       <p>Email:</p>
       <input ref={emailRef} type="text" onKeyDown={pressEnter} />
       <p>Password:</p>
       <input ref={passwordRef} type="password" onKeyDown={pressEnter} />
-      <button onClick={clickLogin}>{props.route}</button>
+      <button onClick={clickRegisterLogin}>{props.route}</button>
     </div>
   );
 };

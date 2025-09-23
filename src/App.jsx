@@ -25,7 +25,6 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "instant"});
-    alert(lastLogin);
   }, [route, lastLogin]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
