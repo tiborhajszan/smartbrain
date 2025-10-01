@@ -50,7 +50,13 @@ export default function RegisterLogin(props) {
     .then(responseObj => {
       if (responseObj.status) {
         props.setRoute("Detector");
-        props.setUser(responseObj.user);
+        props.setUser({
+          id: responseObj.id,
+          name: responseObj.name,
+          email: responseObj.email,
+          detects: responseObj.detects,
+          lastLogin: responseObj.lastLogin
+        });
         props.setLastLogin(new Date());
       } else {
         props.setUser({});
@@ -68,18 +74,32 @@ export default function RegisterLogin(props) {
     return;
   };
 
-  // rendering component -----------------------------------------------------------------------------------------------
+  // rendering register page -------------------------------------------------------------------------------------------
 
-  return (
+  if (props.route === "Register") return (
     <div className="register-login">
-      <legend>{props.route}</legend>
-      {props.route === "Register" ? <p>Name:</p> : null}
-      {props.route === "Register" ? <input ref={nameRef} type="text" onKeyDown={pressEnter} /> : null}
+      <legend>Register</legend>
+      <p>Name:</p>
+      <input ref={nameRef} type="text" onKeyDown={pressEnter} />
       <p>Email:</p>
       <input ref={emailRef} type="text" onKeyDown={pressEnter} />
       <p>Password:</p>
       <input ref={passwordRef} type="password" onKeyDown={pressEnter} />
-      <button onClick={clickRegisterLogin}>{props.route}</button>
+      <button onClick={clickRegisterLogin}>Register</button>
     </div>
   );
+
+  // rendering login page ----------------------------------------------------------------------------------------------
+
+  return (
+    <div className="register-login">
+      <legend>Login</legend>
+      <p>Email:</p>
+      <input ref={emailRef} type="text" onKeyDown={pressEnter} />
+      <p>Password:</p>
+      <input ref={passwordRef} type="password" onKeyDown={pressEnter} />
+      <button onClick={clickRegisterLogin}>Login</button>
+    </div>
+  );
+
 };

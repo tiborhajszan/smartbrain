@@ -31,7 +31,7 @@ export default function App() {
 
   if (route === "Detector") return (
     <>
-      <NavBar refNav={navRef} route={route} setRoute={setRoute} />
+      <NavBar refNav={navRef} route={route} setRoute={setRoute} user={user} />
       <h1 id="title">SmartBrain Face Detector</h1>
       <FaceDetector refNav={navRef} />
       <FooterBar route={route} />
@@ -47,4 +47,5 @@ export default function App() {
       <FooterBar route={route} />
     </>
   );
+
 };
