@@ -14,18 +14,20 @@ export default function NavBar(props) {
 
   // ref and state -----------------------------------------------------------------------------------------------------
 
-  const userRef = useRef(null);
-  const profileRef = useRef(null);
+  const profileSwitchRef = useRef(null);
+  const profileWindowRef = useRef(null);
   const [profileOpen, setProfileOpen] = useState(false);
 
   // click outside callback --------------------------------------------------------------------------------------------
   
   function clickOutside(event) {
-    if (!userRef.current.contains(event.target) && !profileRef.current.contains(event.target)) setProfileOpen(false);
+    if (!profileSwitchRef.current.contains(event.target)
+    && !profileWindowRef.current.contains(event.target))
+      setProfileOpen(false);
     return;
   };
 
-  // close profile effect ----------------------------------------------------------------------------------------------
+  // close profile window effect ---------------------------------------------------------------------------------------
 
   useEffect(() => {
     if (props.route !== "Detector") return;
@@ -42,22 +44,21 @@ export default function NavBar(props) {
           <i className="fa fa-sign-out fa-flip-horizontal"></i>&nbsp;&nbsp;Logout
         </span>
         <Logo />
-        <span ref={userRef} onClick={() => setProfileOpen(!profileOpen)}>
+        <span ref={profileSwitchRef} onClick={() => setProfileOpen(!profileOpen)}>
           <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
         </span>
-        <Profile
-          refProfile={profileRef} profileOpen={profileOpen}
+        <Profile refProfile={profileWindowRef} profileOpen={profileOpen} user={props.user}
           userName={"Tibor Hajszan"}
           detectCount={"#110"}
           lastLogin={"2025.06.23"}
         />
       </div>
     </nav>
-  )
+  );
 
   // rendering register page navigation bar ----------------------------------------------------------------------------
 
-  else if (props.route === "Register") return (
+  if (props.route === "Register") return (
     <nav ref={props.refNav}>
       <div>
         <span>SmartBrain</span>
@@ -67,11 +68,11 @@ export default function NavBar(props) {
         </span>
       </div>
     </nav>
-  )
+  );
 
   // rendering login page navigation bar -------------------------------------------------------------------------------
 
-  else return (
+  return (
     <nav ref={props.refNav}>
       <div>
         <span>SmartBrain</span>
