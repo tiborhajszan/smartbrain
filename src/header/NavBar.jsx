@@ -47,11 +47,7 @@ export default function NavBar(props) {
         <span ref={profileSwitchRef} onClick={() => setProfileOpen(!profileOpen)}>
           <i className="fa fa-user"></i>&nbsp;&nbsp;Profile
         </span>
-        <Profile refProfile={profileWindowRef} profileOpen={profileOpen} user={props.user}
-          userName={"Tibor Hajszan"}
-          detectCount={"#110"}
-          lastLogin={"2025.06.23"}
-        />
+        <Profile refProfile={profileWindowRef} profileOpen={profileOpen} user={props.user} />
       </div>
     </nav>
   );

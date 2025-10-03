@@ -10,11 +10,12 @@ import "./Profile.css";
 export default function Profile(props) {
   return (
     <div ref={props.refProfile} className={`profile ${props.profileOpen ? "open" : "close"}`}>
-      <p>{props.userName}</p>
+      <p>{props.user.name}</p>
+      <p>{props.user.email}</p>
       <hr />
-      <p>Detect Count:&nbsp;&nbsp;<br /><span>{props.detectCount}</span></p>
-      <hr />
-      <p>Last Login:&nbsp;&nbsp;<br /><span>{props.lastLogin}</span></p>
+      <p>Detect Count:&nbsp;&nbsp;<br /><span>{props.user.detects}</span></p>
+      <p>Last Login:&nbsp;&nbsp;<br /><span>{props.user.lastLogin.toLocaleString()}</span></p>
+      <button>Delete Account</button>
     </div>
   );
 };

@@ -55,7 +55,7 @@ export default function RegisterLogin(props) {
           name: responseObj.name,
           email: responseObj.email,
           detects: responseObj.detects,
-          lastLogin: responseObj.lastLogin
+          lastLogin: new Date(responseObj.lastLogin)
         });
         props.setLastLogin(new Date());
       } else {
