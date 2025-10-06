@@ -15,6 +15,7 @@ export default function Profile(props) {
       <hr />
       <p>Detect Count:&nbsp;&nbsp;<br /><span>{props.user.detects}</span></p>
       <p>Last Login:&nbsp;&nbsp;<br /><span>{props.user.lastLogin.toLocaleString()}</span></p>
+      <hr />
       <button>Delete Account</button>
     </div>
   );
