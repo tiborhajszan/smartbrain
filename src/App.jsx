@@ -17,7 +17,9 @@ export default function App() {
   // ref and state -----------------------------------------------------------------------------------------------------
 
   const navRef = useRef(null);
-  const [route, setRoute] = useState("Login");
+  const [frontRoute, setFrontRoute] = useState("Login");
+  const apiRoute = useRef(null);
+  const payLoad = useRef({});
   const [user, setUser] = useState({});
   const [lastLogin, setLastLogin] = useState(null);
 
@@ -25,16 +27,16 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "instant"});
-  }, [route, lastLogin]);
+  }, [frontRoute, lastLogin]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
 
-  if (route === "Detector") return (
+  if (frontRoute === "Detector") return (
     <>
-      <NavBar refNav={navRef} route={route} setRoute={setRoute} user={user} />
+      <NavBar refNav={navRef} route={frontRoute} setRoute={setFrontRoute} user={user} />
       <h1 id="title">SmartBrain Face Detector</h1>
       <FaceDetector refNav={navRef} />
-      <FooterBar route={route} />
+      <FooterBar route={frontRoute} />
     </>
   );
 
@@ -42,9 +44,9 @@ export default function App() {
 
   return (
     <>
-      <NavBar refNav={navRef} route={route} setRoute={setRoute} />
-      <RegisterLogin route={route} setRoute={setRoute} setUser={setUser} setLastLogin={setLastLogin} />
-      <FooterBar route={route} />
+      <NavBar refNav={navRef} route={frontRoute} setRoute={setFrontRoute} />
+      <RegisterLogin route={frontRoute} setRoute={setFrontRoute} setUser={setUser} setLastLogin={setLastLogin} />
+      <FooterBar route={frontRoute} />
     </>
   );
 
