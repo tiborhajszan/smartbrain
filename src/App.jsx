@@ -21,7 +21,7 @@ export default function App() {
   const apiRoute = useRef(null);
   const payLoad = useRef({});
   const [user, setUser] = useState({});
-  const [lastLogin, setLastLogin] = useState(null);
+  const lastLogin = useRef(null);
 
   // scroll to page top effect -----------------------------------------------------------------------------------------
 
@@ -45,7 +45,11 @@ export default function App() {
   return (
     <>
       <NavBar refNav={navRef} route={frontRoute} setRoute={setFrontRoute} />
-      <RegisterLogin route={frontRoute} setRoute={setFrontRoute} setUser={setUser} setLastLogin={setLastLogin} />
+      <RegisterLogin
+        frontRoute={frontRoute} setFrontRoute={setFrontRoute}
+        apiRoute={apiRoute} payLoad={payLoad}
+        setUser={setUser} lastLogin={lastLogin}
+      />
       <FooterBar route={frontRoute} />
     </>
   );
