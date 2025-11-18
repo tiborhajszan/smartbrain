@@ -22,7 +22,7 @@ export default function RegisterLogin(props) {
   function pressEnter(event) {
     if (event.keyCode === 13) clickRegisterLogin();
     return;
-  }
+  };
 
   // click register/login callback -------------------------------------------------------------------------------------
 
@@ -31,8 +31,8 @@ export default function RegisterLogin(props) {
     // setting /login request
     props.apiRoute.current = "/login";
     props.payLoad.current = {
-      email: "john@gmail.com",
-      password: "cookies"
+      email: emailRef.current.value,
+      password: passwordRef.current.value
     };
 
     // setting /register request
@@ -44,35 +44,29 @@ export default function RegisterLogin(props) {
     // api call
     smartBrainClient(props)
 
-    .then(response => console.log(response))
-    
-    .catch(error => console.log(error.message));
-    
-    return;
-
     // response success
-    apiResponse.then(responseObj => {
+    .then(apiResponse => {
       props.setFrontRoute("Detector");
       props.setUser({
-        id: responseObj.id,
-        name: responseObj.name,
-        email: responseObj.email,
-        detects: responseObj.detects,
-        lastLogin: new Date(responseObj.lastLogin)
+        id: apiResponse.id,
+        name: apiResponse.name,
+        email: apiResponse.email,
+        detects: apiResponse.detects,
+        lastLogin: new Date(apiResponse.lastLogin)
       });
-      props.lastLogin.current = new Date();
-    });
+      props.currentLogin.current = new Date();
+    })
 
     // response error
-    apiResponse.catch((error) => {
-      // props.setUser({});
-      // props.lastLogin.current = null;
+    .catch(error => {
       alert(error.message);
+      props.setFrontRoute("Login");
+      props.setUser({});
+      props.currentLogin.current = null;
     });
 
-    // returning
+    // callback ends
     return;
-  
   };
 
   // rendering register page -------------------------------------------------------------------------------------------

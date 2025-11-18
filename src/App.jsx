@@ -21,13 +21,17 @@ export default function App() {
   const apiRoute = useRef(null);
   const payLoad = useRef({});
   const [user, setUser] = useState({});
-  const lastLogin = useRef(null);
+  const currentLogin = useRef(null);
 
   // scroll to page top effect -----------------------------------------------------------------------------------------
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "instant"});
-  }, [frontRoute, lastLogin]);
+    console.log(frontRoute);
+    console.log(user);
+    console.log(currentLogin);
+    return;
+  }, [frontRoute, user, currentLogin]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
 
@@ -48,7 +52,7 @@ export default function App() {
       <RegisterLogin
         frontRoute={frontRoute} setFrontRoute={setFrontRoute}
         apiRoute={apiRoute} payLoad={payLoad}
-        setUser={setUser} lastLogin={lastLogin}
+        setUser={setUser} currentLogin={currentLogin}
       />
       <FooterBar route={frontRoute} />
     </>
