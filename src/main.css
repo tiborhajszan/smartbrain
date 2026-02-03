@@ -1,6 +1,6 @@
 /*######################################################################################################################
-//  Complete Web Developer in 2025: Zero to Mastery
-//  Final Project | SmartBrain | Application Webframe Styles
+//  Complete Web Developer in 2026: Zero to Mastery
+//  Final Project | SmartBrain > Application Webframe Styles
 //####################################################################################################################*/
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
@@ -31,8 +31,8 @@ body {
 /*--------------------------------------------------------------------------------------------------------------------*/
 #root {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
   justify-content: space-between;
   gap: 60px;
+  margin: 0 auto;
 }

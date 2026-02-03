@@ -1,6 +1,6 @@
 //######################################################################################################################
-//  Complete Web Developer in 2025: Zero to Mastery
-//  Final Project | SmartBrain | Application Webframe Logic
+//  Complete Web Developer in 2026: Zero to Mastery
+//  Final Project | SmartBrain > Application Webframe Logic
 //######################################################################################################################
 
 import {createRoot} from "react-dom/client";
