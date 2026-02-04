@@ -1,0 +1,16 @@
+/*######################################################################################################################
+//  Complete Web Developer in 2026 : Zero to Mastery
+//  Final Project | SmartBrain > Detector Page Styles
+//####################################################################################################################*/
+
+#title {
+  width: calc(100% - 30px);
+  max-width: calc(1440px - 30px);
+
+  margin: 0 auto;
+
+  text-align: center;
+  color: #ffd658;
+  font-size: 32px;
+  font-weight: 900;
+  }

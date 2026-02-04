@@ -1,12 +1,12 @@
 //######################################################################################################################
-//  Complete Web Developer in 2025: Zero to Mastery
-//  Final Project | SmartBrain | Root Component Logic
+//  Complete Web Developer in 2026 : Zero to Mastery
+//  Final Project | SmartBrain > Root Component Logic
 //######################################################################################################################
 
 import {useRef, useState, useEffect} from "react";
+import Detector from "./pages/Detector.jsx";
 import NavBar from "./header/NavBar.jsx";
 import RegisterLogin from "./login/RegisterLogin.jsx";
-import FaceDetector from "./main/FaceDetector.jsx";
 import FooterBar from "./footer/FooterBar.jsx";
 import "./App.css";
 
@@ -20,28 +20,17 @@ export default function App() {
   const [frontRoute, setFrontRoute] = useState("Login");
   const apiRoute = useRef(null);
   const payLoad = useRef({});
-  const [user, setUser] = useState({});
+  const userObj = useState({});
   const currentLogin = useRef(null);
 
   // scroll to page top effect -----------------------------------------------------------------------------------------
 
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: "instant"});
-    console.log(frontRoute);
-    console.log(user);
-    console.log(currentLogin);
-    return;
-  }, [frontRoute, user, currentLogin]);
+  useEffect(() => window.scrollTo({top: 0, behavior: "instant"}), [frontRoute]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
 
   if (frontRoute === "Detector") return (
-    <>
-      <NavBar refNav={navRef} route={frontRoute} setRoute={setFrontRoute} user={user} />
-      <h1 id="title">SmartBrain Face Detector</h1>
-      <FaceDetector refNav={navRef} />
-      <FooterBar route={frontRoute} />
-    </>
+    <Detector navRef={navRef} frontRoute={frontRoute} setFrontRoute={setFrontRoute} userObj={userObj} />
   );
 
   // rendering register/login page -------------------------------------------------------------------------------------
