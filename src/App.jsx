@@ -5,46 +5,34 @@
 
 import {useRef, useState, useEffect} from "react";
 import Detector from "./pages/Detector.jsx";
-import NavBar from "./header/NavBar.jsx";
-import RegisterLogin from "./login/RegisterLogin.jsx";
-import FooterBar from "./footer/FooterBar.jsx";
+import Login from "./pages/Login.jsx";
 import "./App.css";
 
 // root component renderer #############################################################################################
-
 export default function App() {
 
   // ref and state -----------------------------------------------------------------------------------------------------
-
   const navRef = useRef(null);
   const [frontRoute, setFrontRoute] = useState("Login");
   const apiRoute = useRef(null);
   const payLoad = useRef({});
-  const userObj = useState({});
-  const currentLogin = useRef(null);
+  const userObj = useRef({});
 
   // scroll to page top effect -----------------------------------------------------------------------------------------
-
   useEffect(() => window.scrollTo({top: 0, behavior: "instant"}), [frontRoute]);
 
   // rendering detector page -------------------------------------------------------------------------------------------
-
   if (frontRoute === "Detector") return (
     <Detector navRef={navRef} frontRoute={frontRoute} setFrontRoute={setFrontRoute} userObj={userObj} />
   );
 
   // rendering register/login page -------------------------------------------------------------------------------------
+  return (<>
+    <Login
+      navRef={navRef} frontRoute={frontRoute} setFrontRoute={setFrontRoute}
+      apiRoute={apiRoute} payLoad={payLoad} userObj={userObj}
+    />
+  </>);
 
-  return (
-    <>
-      <NavBar refNav={navRef} route={frontRoute} setRoute={setFrontRoute} />
-      <RegisterLogin
-        frontRoute={frontRoute} setFrontRoute={setFrontRoute}
-        apiRoute={apiRoute} payLoad={payLoad}
-        setUser={setUser} currentLogin={currentLogin}
-      />
-      <FooterBar route={frontRoute} />
-    </>
-  );
-
+// root component ends \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 };
